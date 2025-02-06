@@ -1,0 +1,282 @@
+{%- assign setting = section.settings -%}
+
+{% style %}
+	#shopify-section-{{ section.id }} {
+		--text-align: {{ setting.text_alignment |  default: 'center' }};
+		--overlay-opacity: {{ setting.overlay_opacity | default: 0.5 }};
+	}
+{% endstyle %}
+
+<div class="color-{{ section.settings.color_scheme }} media-banner ts-relative ts-w-full lg:ts-aspect-video ts-aspect-square ts-overflow-hidden ts-grid ts-grid-rows-1 ts-grid-cols-1">
+	{% if setting.add_overlay %}
+		<div class="overlay ts-absolute ts-top-0 ts-left-0 ts-w-full ts-h-full ts-z-[1] ts-inset-0 ts-bg-black ts-opacity-[var(--overlay-opacity)]">&nbsp;</div>
+	{% endif %}
+	<div class="banner-media banner-media--{{ setting.banner_type }} ts-relative ts-w-full ts-h-auto ts-row-span-full ts-col-span-full">
+		{% if setting.banner_type == 'video' and setting.video != blank %}
+			<video src="{{ section.settings.banner_video }}" autoplay loop muted class="ts-w-full ts-h-full ts-object-cover"></video>
+		{% elsif setting.banner_type == 'image' and setting.banner_image != blank %}
+			<img src="{{ section.settings.banner_image | img_url: 'master' }}" alt="Banner Image" class="ts-w-full ts-h-auto ts-object-cover ts-row-span-full ts-col-span-full">
+		{% endif %}
+	</div>
+
+	<div class="banner-contents ts-relative ts-z-[2] ts-flex ts-flex-col {{ setting.content_alignment_h }} {{ setting.content_alignment_v }} text-align ts-row-span-full ts-col-span-full lg:ts-px-24 md:ts-px-12 ts-px-8">
+		<div class="contents-wrapper ts-w-auto md:ts-p-8 ts-p-4">
+			{%- for block in section.blocks -%}
+				{% case block.type %}
+					{% when 'heading' %}
+						<h2 class="ts-uppercase {{ block.settings.heading_size }} ts-font-vincent ts-leading-none">{{ block.settings.heading_text }}</h2>
+					{% when 'richtext' %}
+						<div class="rte ts-mt-6">{{ block.settings.richtext_content }}</div>
+				{% endcase %}
+			{%- endfor -%}
+
+			<div class="btn-wrapper ts-inline-block ts-space-x-10 ts-w-full ts-mt-8 ts-align-middle ts-px-5">
+				{%- for block in section.blocks -%}
+					{%- if block.type == 'buttons' -%}
+						{%- if block.settings.button_text != blank -%}
+							<a href="{{ block.settings.button_url | default: '#' }}" class="btn btn-text-only">{{ block.settings.button_text }}</a>
+						{%- endif -%}
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name": "[COW] Banner",
+		"class": "cow-banner",
+		"tag": "section",
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "color_scheme",
+				"label": "t:sections.all.colors.label",
+				"default": "scheme-1"
+			},
+			{
+				"type": "select",
+				"id": "banner_type",
+				"label": "Banner Type",
+				"options": [
+					{
+						"value": "image",
+						"label": "Image"
+					},
+					{
+						"value": "video",
+						"label": "Video"
+					}
+				],
+				"default": "image"
+			},
+			{
+        "type": "checkbox",
+        "id": "add_overlay",
+        "label": "Show Overlay",
+        "default": false
+      },
+			{
+				"type": "range",
+				"id": "overlay_opacity",
+				"label": "Overlay Opacity",
+				"default": 0.5,
+				"min": 0,
+				"max": 1,
+				"step": 0.1
+			},
+			{
+				"type": "header",
+				"content": "Image Banner"
+			},
+			{
+				"type": "image_picker",
+				"id": "banner_image",
+				"label": "Banner Image"
+			},
+			{
+				"type": "header",
+				"content": "Video Banner"
+			},
+			{
+        "type": "video",
+        "id": "video",
+        "label": "Banner Video",
+        "info": "A Shopify-hosted video"
+      },
+      {
+        "type": "image_picker",
+        "id": "poster",
+        "label": "Banner Video Poster",
+        "info": "Video fallback image"
+      },
+			{
+        "type": "header",
+        "content": "Mobile Video Banner"
+      },
+      {
+        "type": "video",
+        "id": "mb_video",
+        "label": "Mobile Banner Video",
+        "info": "A Shopify-hosted video"
+      },
+      {
+        "type": "image_picker",
+        "id": "mb_poster",
+        "label": "Mobile Banner Video Poster",
+        "info": "Video fallback image"
+      },
+			{
+				"type": "header",
+				"content": "Content Settings"
+			},
+			{
+				"type": "select",
+				"id": "content_alignment_h",
+				"label": "Content Alignment",
+				"info": "Horizontal alignment of the contents.",
+				"options": [
+					{
+						"value": "ts-items-start",
+						"label": "Left"
+					},
+					{
+						"value": "ts-items-center",
+						"label": "Center"
+					},
+					{
+						"value": "ts-items-end",
+						"label": "Right"
+					}
+				],
+				"default": "ts-items-center"
+			},
+			{
+				"type": "select",
+				"id": "content_alignment_v",
+				"label": "Content Alignment",
+				"info": "Vertical alignment of the contents.",
+				"options": [
+					{
+						"value": "ts-justify-start",
+						"label": "Top"
+					},
+					{
+						"value": "ts-justify-center",
+						"label": "Middle"
+					},
+					{
+						"value": "ts-justify-end",
+						"label": "Bottom"
+					}
+				],
+				"default": "ts-justify-center"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment",
+				"label": "Text Alignment",
+				"options": [
+					{
+						"value": "left",
+						"label": "Left"
+					},
+					{
+						"value": "center",
+						"label": "Center"
+					},
+					{
+						"value": "right",
+						"label": "Right"
+					}
+				],
+				"default": "center"
+			}
+		],
+		"blocks": [
+			{
+				"type": "heading",
+				"name": "Heading",
+				"limit": 1,
+				"settings": [
+					{
+						"type": "text",
+						"id": "heading_text",
+						"label": "Heading Text",
+						"default": "Banner Heading"
+					},
+					{
+						"type": "select",
+						"id": "heading_size",
+						"label": "Heading Size",
+						"options": [
+							{
+								"value": "ts-text-clamp_xxl",
+								"label": "Extra Large"
+							},
+							{
+								"value": "ts-text-clamp_xl",
+								"label": "Large"
+							},
+							{
+								"value": "ts-text-clamp_l",
+								"label": "Medium"
+							},
+							{
+								"value": "ts-text-size_md",
+								"label": "Small"
+							},
+							{
+								"value": "ts-text-size_sm",
+								"label": "Extra Small"
+							}
+						],
+						"default": "ts-text-clamp_xxl"
+					}
+				]
+			},
+			{
+				"type": "richtext",
+				"name": "Rich Text",
+				"limit": 1,
+				"settings": [
+					{
+						"type": "richtext",
+						"id": "richtext_content",
+						"label": "Rich Text Content",
+						"default": "<p>Rich Text Content</p>"
+					}
+				]
+			},
+			{
+				"type": "buttons",
+				"name": "Button",
+				"limit": 2,
+				"settings": [
+					{
+						"type": "url",
+						"id": "button_url",
+						"label": "Button URL"
+					},
+					{
+						"type": "text",
+						"id": "button_text",
+						"label": "Button Text",
+						"default": "Button"
+					}
+				]
+			}
+		],
+		"presets": [
+			{
+				"name": "Banner",
+				"blocks": [
+					{ "type": "heading" },
+					{ "type": "buttons" },
+					{ "type": "buttons" }
+				]
+			}
+		]
+	}
+{% endschema %}

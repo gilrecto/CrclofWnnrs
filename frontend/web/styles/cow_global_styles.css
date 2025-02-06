@@ -1,0 +1,15 @@
+.header {
+	@apply md:!ts-py-[1.3rem];
+}
+.header .list-menu__item {
+	@apply ts-uppercase lg:ts-px-6 ts-text-size_xs;
+}
+.header__icon, .header__icon--cart .icon {
+	@apply ts-w-16 ts-h-16;
+}
+.text-align {
+  text-align: var(--text-align);
+}
+.btn-text-only {
+	@apply ts-text-size_sm ts-uppercase ts-font-normal hover:ts-font-bold hover:ts-underline;
+}

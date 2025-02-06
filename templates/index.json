@@ -1,42 +1,27 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "cow_banner_CfjHj6": {
+      "type": "cow_banner",
       "blocks": {
-        "heading": {
+        "heading_EAU3mB": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "heading_text": "LOrem Ipsum",
+            "heading_size": "ts-text-clamp_xxl"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "heading_EAU3mB"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "scheme-4",
+        "banner_type": "image",
+        "banner_image": "shopify:\/\/shop_images\/mt-about-image_3.jpg",
+        "banner_video": "",
+        "content_alignment_h": "ts-items-start",
+        "content_alignment_v": "ts-justify-end",
+        "text_alignment": "center"
       }
     },
     "featured_collection": {
@@ -50,12 +35,11 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -63,13 +47,14 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
+    "cow_banner_CfjHj6",
     "featured_collection"
   ]
 }

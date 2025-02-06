@@ -3,6 +3,7 @@
 let plugin = require('tailwindcss/plugin');
 
 module.exports = {
+	prefix: "ts-",
   content: ['./**/*.liquid', './frontend/**/*.{js,ts,jsx,tsx}'],
   safelist: [],
   theme: {
@@ -16,10 +17,12 @@ module.exports = {
         clamp_l: "clamp(3rem, 4vw, 4.5rem)",
         size_md: "2.5rem",
         size_sm: "1.3rem",
-        size_xs: "11rem",
+        size_xs: "1.1rem",
       },
 		},
 		colors: {
+			white: "#FFFFFF",
+			black: "#000000",
 			transparent: 'transparent',
 			light_brown: "#EBE9E3",
 			accent: "#005514"

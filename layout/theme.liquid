@@ -30,11 +30,6 @@
 
     {% render 'cow_head_scripts' %}
 
-    {%- liquid
-      render 'vite-tag' with 'main.css'
-      render 'vite-tag' with 'main.js'
-    -%}
-
     {{ content_for_header }}
 
     {% render 'cow_root_css' %}
@@ -44,6 +39,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {%- liquid
+      render 'vite-tag' with 'main.css'
+      render 'vite-tag' with 'main.js'
+    -%}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

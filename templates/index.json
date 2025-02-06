@@ -9,16 +9,34 @@
             "heading_text": "LOrem Ipsum",
             "heading_size": "ts-text-clamp_xxl"
           }
+        },
+        "buttons_w6tdcX": {
+          "type": "buttons",
+          "settings": {
+            "button_url": "",
+            "button_text": "shop MEN"
+          }
+        },
+        "buttons_b3qxXe": {
+          "type": "buttons",
+          "settings": {
+            "button_url": "",
+            "button_text": "shop WoMEN"
+          }
         }
       },
       "block_order": [
-        "heading_EAU3mB"
+        "heading_EAU3mB",
+        "buttons_w6tdcX",
+        "buttons_b3qxXe"
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "banner_type": "image",
+        "banner_type": "video",
+        "add_overlay": false,
+        "overlay_opacity": 0.5,
         "banner_image": "shopify:\/\/shop_images\/mt-about-image_3.jpg",
-        "banner_video": "",
+        "video": "shopify:\/\/files\/videos\/-2665-4731-a24d-9a3f1fa2410a.mp4",
         "content_alignment_h": "ts-items-start",
         "content_alignment_v": "ts-justify-end",
         "text_alignment": "center"

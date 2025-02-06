@@ -7,13 +7,21 @@
 	}
 {% endstyle %}
 
-<div class="color-{{ section.settings.color_scheme }} media-banner ts-relative ts-w-full lg:ts-aspect-video ts-aspect-square ts-overflow-hidden ts-grid ts-grid-rows-1 ts-grid-cols-1">
+<div class="color-{{ section.settings.color_scheme }} media-banner ts-relative ts-w-full lg:ts-aspect-video ts-aspect-[3/4] ts-overflow-hidden ts-grid ts-grid-rows-1 ts-grid-cols-1">
 	{% if setting.add_overlay %}
 		<div class="overlay ts-absolute ts-top-0 ts-left-0 ts-w-full ts-h-full ts-z-[1] ts-inset-0 ts-bg-black ts-opacity-[var(--overlay-opacity)]">&nbsp;</div>
 	{% endif %}
 	<div class="banner-media banner-media--{{ setting.banner_type }} ts-relative ts-w-full ts-h-auto ts-row-span-full ts-col-span-full">
 		{% if setting.banner_type == 'video' and setting.video != blank %}
-			<video src="{{ section.settings.banner_video }}" autoplay loop muted class="ts-w-full ts-h-full ts-object-cover"></video>
+			{%- if setting.poster != blank -%}
+				{% assign poster = setting.poster | image_url: width: setting.poster.width %}
+			{%- endif -%}
+			{%- assign video_source = setting.video.sources[1].url -%}
+			<video class="lazy video-player ts-w-full ts-h-full ts-object-cover" autoplay muted loop playsinline poster="{{ poster }}">
+				<source data-src="{{ video_source }}" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<script src="{{ 'cow_lazyload_video.js' | asset_url }}" async></script>
 		{% elsif setting.banner_type == 'image' and setting.banner_image != blank %}
 			<img src="{{ section.settings.banner_image | img_url: 'master' }}" alt="Banner Image" class="ts-w-full ts-h-auto ts-object-cover ts-row-span-full ts-col-span-full">
 		{% endif %}
@@ -40,8 +48,38 @@
 				{%- endfor -%}
 			</div>
 		</div>
-	</div>
+	</div> 
 </div>
+
+{%- if setting.mb_video != blank -%}
+  {% assign poster_mob = setting.mb_poster | image_url: width: setting.mb_poster.width %}
+  {% if setting.mb_poster == blank %}
+    {% assign poster_mob = setting.poster | image_url: width: setting.poster.width %}
+  {% endif %}
+	
+  <script type="text/javascript" async>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loadMobileMedia = () => {
+        let mobileView = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
+
+        if(!mobileView.matches) {
+          return
+        } else {
+          let mb_video = '{{ setting.mb_video.sources[1].url }}',
+              mb_poster = '{{ poster_mob }}',
+              video_player = document.querySelector("video.video-player");
+
+
+          video_player.children[0].dataset.src = mb_video
+          video_player.poster = mb_poster
+        }
+      }
+
+      loadMobileMedia();
+      window.addEventListener('resize', loadMobileMedia);
+    });
+  </script>
+{%- endif -%}
 
 {% schema %}
 	{

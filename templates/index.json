@@ -6,8 +6,10 @@
         "heading_EAU3mB": {
           "type": "heading",
           "settings": {
+            "type": "title",
             "heading_text": "LOrem Ipsum",
-            "heading_size": "ts-text-clamp_xxl"
+            "heading_size": "ts-text-clamp_xxl",
+            "text_transform": "ts-uppercase"
           }
         },
         "buttons_w6tdcX": {
@@ -37,42 +39,170 @@
         "overlay_opacity": 0.5,
         "banner_image": "shopify:\/\/shop_images\/mt-about-image_3.jpg",
         "video": "shopify:\/\/files\/videos\/-2665-4731-a24d-9a3f1fa2410a.mp4",
-        "content_alignment_h": "ts-items-start",
-        "content_alignment_v": "ts-justify-end",
-        "text_alignment": "center"
+        "content_alignment_h": "md:ts-items-start",
+        "content_alignment_v": "md:ts-justify-end",
+        "text_alignment": "center",
+        "content_alignment_h_mobile": "ts-items-center",
+        "content_alignment_v_mobile": "ts-justify-end",
+        "text_alignment_mobile": "center",
+        "top_spacing": 0,
+        "bottom_spacing": 14.5,
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 5.5
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "cow_banner_pd9FiB": {
+      "type": "cow_banner",
+      "blocks": {
+        "heading_njDeRX": {
+          "type": "heading",
+          "settings": {
+            "type": "caption",
+            "heading_text": "Explore Collections",
+            "heading_size": "ts-text-size_sm",
+            "text_transform": "ts-uppercase"
+          }
+        },
+        "heading_TccBzY": {
+          "type": "heading",
+          "settings": {
+            "type": "title",
+            "heading_text": "Summer 25",
+            "heading_size": "ts-text-clamp_l",
+            "text_transform": "ts-normal-case"
+          }
+        },
+        "buttons_9eNYQW": {
+          "type": "buttons",
+          "settings": {
+            "button_url": "",
+            "button_text": "DISCOVER"
+          }
+        }
+      },
+      "block_order": [
+        "heading_njDeRX",
+        "heading_TccBzY",
+        "buttons_9eNYQW"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "color_scheme": "scheme-3",
+        "banner_type": "image",
+        "add_overlay": true,
+        "overlay_opacity": 0.3,
+        "banner_image": "shopify:\/\/shop_images\/summer_collection_banner.jpg",
+        "banner_img_mb": "shopify:\/\/shop_images\/summer_collection_banner_mob.jpg",
+        "content_alignment_h": "md:ts-items-center",
+        "content_alignment_v": "md:ts-justify-center",
+        "text_alignment": "center",
+        "content_alignment_h_mobile": "ts-items-center",
+        "content_alignment_v_mobile": "ts-justify-center",
+        "text_alignment_mobile": "center",
+        "top_spacing": 0,
+        "bottom_spacing": 0,
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 0
+      }
+    },
+    "cow_banner_ETc6C3": {
+      "type": "cow_banner",
+      "blocks": {
+        "heading_3cr6DY": {
+          "type": "heading",
+          "settings": {
+            "type": "caption",
+            "heading_text": "Explore Collections",
+            "heading_size": "ts-text-size_sm",
+            "text_transform": "ts-uppercase"
+          }
+        },
+        "heading_UhHAyg": {
+          "type": "heading",
+          "settings": {
+            "type": "title",
+            "heading_text": "Winners Circle",
+            "heading_size": "ts-text-clamp_l",
+            "text_transform": "ts-normal-case"
+          }
+        },
+        "buttons_wVBWRR": {
+          "type": "buttons",
+          "settings": {
+            "button_url": "",
+            "button_text": "DISCOVER"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3cr6DY",
+        "heading_UhHAyg",
+        "buttons_wVBWRR"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "banner_type": "image",
+        "add_overlay": true,
+        "overlay_opacity": 0.3,
+        "banner_image": "shopify:\/\/shop_images\/winnrs_collection_banner.jpg",
+        "banner_img_mb": "shopify:\/\/shop_images\/winnrs_collection_banner_mob.jpg",
+        "content_alignment_h": "md:ts-items-center",
+        "content_alignment_v": "md:ts-justify-center",
+        "text_alignment": "center",
+        "content_alignment_h_mobile": "ts-items-center",
+        "content_alignment_v_mobile": "ts-justify-center",
+        "text_alignment_mobile": "center",
+        "top_spacing": 0,
+        "bottom_spacing": 0,
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 0
+      }
+    },
+    "cow_featured_collection_xeLpPm": {
+      "type": "cow_featured_collection",
+      "settings": {
+        "color_scheme": "",
+        "title": "Shop  BEST SELLER",
+        "title_size": "ts-text-size_md",
+        "collection": "all-products",
+        "view_all": true,
+        "prodoct_limit": 8,
+        "view_link_label": "Shop All",
+        "text_alignment": "center",
+        "view_all_style": "link",
+        "container_width": 1920,
+        "box_color_scheme": "",
+        "bordered": true,
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "d_slides": 4,
+        "l_slides": 4,
+        "t_slides": 3,
+        "m_slides": 2,
+        "d_space": 32,
+        "l_space": 28,
+        "t_space": 15,
+        "m_space": 10,
+        "enable_loop": false,
+        "mousewheel": false,
+        "enable_autoplay": false,
+        "autoplay_speed": 5000,
+        "enable_navigation": true,
+        "enable_pagination": false,
+        "destroy_swiper": true,
+        "pad_desk": 100,
+        "pad_lap": 80,
+        "pad_tab": 60,
+        "pad_mob": 40
       }
     }
   },
   "order": [
     "cow_banner_CfjHj6",
-    "featured_collection"
+    "cow_banner_pd9FiB",
+    "cow_banner_ETc6C3",
+    "cow_featured_collection_xeLpPm"
   ]
 }

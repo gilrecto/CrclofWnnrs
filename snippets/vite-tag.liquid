@@ -4,7 +4,8 @@
 {% endcomment %}
 {% assign path = vite-tag | replace: '~/', '../' | replace: '@/', '../' %}
 {% if path == "/frontend/entrypoints/main.css" or path == "main.css" %}
-  {{ 'main-BzuV-RGa.css' | asset_url | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'main-3ZRXCWiI.css' | asset_url | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/main.js" or path == "main.js" %}
-  <script src="{{ 'main-B5Qt9EMX.js' | asset_url }}" type="module" crossorigin="anonymous"></script>
+  <script src="{{ 'main-BCVk47Wt.js' | asset_url }}" type="module" crossorigin="anonymous"></script>
+  {{ 'main-CJ-KzOvo.css' | asset_url | stylesheet_tag: preload: preload_stylesheet }}
 {% endif %}

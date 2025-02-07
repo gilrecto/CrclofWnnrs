@@ -15,6 +15,7 @@ export default defineConfig({
   plugins: [cleanup(), shopify({ versionNumbers: true })],
   optimizeDeps: {
     include: [
+      'swiper',
     ],
   },
 });

@@ -1,3 +1,6 @@
+.page-width {
+	@apply xl:!ts-px-24 lg:!ts-px-12 md:!ts-px-8 !ts-px-7;
+}
 .header {
 	@apply md:!ts-py-[1.3rem];
 }
@@ -11,5 +14,63 @@
   text-align: var(--text-align);
 }
 .btn-text-only {
-	@apply ts-text-size_sm ts-uppercase ts-font-normal hover:ts-font-bold hover:ts-underline;
+	@apply ts-text-size_sm ts-uppercase ts-font-normal hover:ts-font-bold hover:ts-underline ts-transition-all ts-duration-300 ts-ease-linear;
+}
+
+.custom-section {
+	padding: var(--padding-sm) 0;
+	overflow: hidden;
+}
+swiper-slider .bordered-card .swiper-slide .card-wrapper .card__inner,
+.collection .card-wrapper .card__inner {
+	border: 1px solid rgba(var(--color-secondary-button-text));
+}
+swiper-slider .bordered-card .swiper-slide .card-wrapper .card__information,
+swiper-slider .bordered-card .swiper-slide .card-wrapper .card-information {
+	text-align: var(--text-align);
+}
+.card-wrapper .card__information .card__heading,
+.card-wrapper .card-information .price {
+	@apply ts-text-size_sm ts-uppercase ts-font-normal ts-tracking-normal;
+}
+.card-wrapper .card-information .price .price--on-sale .price-item--regular {
+	@apply ts-text-[90%];
+	color: rgba(var(--color-foreground), 0.6);
+}
+swiper-slider,
+.swiper-controls {
+	--swiper-theme-color: #000000;
+}
+.swiper-controls .swiper-nav {
+	@apply ts-w-10 ts-h-10 ts-z-[2] ts-relative ts-left-auto ts-right-auto;
+}
+.swiper-controls .swiper-nav.swiper-button-prev {
+	@apply ts-rotate-180
+}
+.swiper-controls .swiper-button-next.swiper-button-disabled,
+.swiper-controls .swiper-button-prev.swiper-button-disabled {
+	@apply ts-opacity-20
+}
+.swiper-controls .swiper-button-next,
+.swiper-controls .swiper-button-prev {
+	@apply after:ts-content-[""]
+}
+swiper-slider.grid-view .swiper-wrapper {
+	@apply ts-grid ts-grid-cols-2 ts-gap-x-4 ts-gap-y-12;
+}
+
+@media only screen and (min-width: 768px) {
+	.custom-section {
+		padding: var(--padding-md) 0;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.custom-section {
+		padding: var(--padding-lg) 0;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.custom-section {
+		padding: var(--padding-xl) 0;
+	}
 }

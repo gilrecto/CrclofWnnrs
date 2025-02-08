@@ -1,0 +1,243 @@
+{% assign setting = section.settings %}
+{%- style -%}
+	#shopify-section-{{ section.id }} {
+		--text-align: {{ setting.text_alignment | default: 'center' }};
+		--padding-xl: {{ setting.pad_desk | append: 'px' }};
+		--padding-lg: {{ setting.pad_lap | append: 'px' }};
+		--padding-md: {{ setting.pad_tab | append: 'px' }};
+		--padding-sm: {{ setting.pad_mob | append: 'px' }};
+	}
+
+	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
+		flex-wrap: nowrap;
+		column-gap: 3rem;
+	}
+{%- endstyle -%}
+
+
+<div class="announcement color-{{ setting.section_colors }} custom-section ts-min-h-12">
+	<swiper-slider>
+		<div class="swiper marquee-swiper">
+			<div class="swiper-wrapper !ts-ease-linear">
+				{% for block in section.blocks %}
+					<div class="swiper-slide ts-select-none">
+						<p class="announcement-text text-align {% if block.settings.show_ico %} ts-flex ts-items-center ts-justify-center ts-gap-[0.8rem]{% endif %} ts-uppercase ts-text-size_xs ts-leading-none" {{ block.shopify_attributes }}>
+							{% if block.settings.show_ico %}
+								<span class="icon-wrapper ts-leading-none sm-mobile:[&>*]:ts-w-[1.3rem] sm-mobile:[&>*]:ts-h-[1.3rem] ts-text-[1.4rem]">
+									{% if block.settings.svg_ico != blank and block.settings.icon == blank %}
+										{{ block.settings.svg_ico }}
+									{% elsif block.settings.svg_ico == blank and block.settings.icon != blank %}
+										{%- liquid
+											assign image = block.settings.icon
+											assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+											assign image_class = 'announcement-icon motion-reduce ts-w-full ts-max-w-full ts-h-auto'
+											assign fetch_priority = 'auto'
+										-%}
+
+										{{
+											image
+											| image_url: width: 13
+											| image_tag: height: 13, sizes: sizes, widths: widths, fetchpriority: fetch_priority, class: image_class, alt: image.alt | default: 'Banner Image'
+										}}
+									{% endif %}
+								</span>
+							{% endif %}
+							<span>
+								{{ block.settings.text }}
+							</span>
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</swiper-slider>
+</div>
+
+{%- liquid
+	assign reverse_dir = false
+	assign speed = setting.marquee_speed | times: 1000
+	
+	if setting.marquee_direction == 'left'
+		assign reverse_dir = true
+	endif
+-%}
+
+<script type="text/javascript" defer>
+	document.addEventListener('DOMContentLoaded', () => {
+		const swiperSlider = document.querySelector('#shopify-section-{{ section.id }} swiper-slider');
+		
+		if (swiperSlider) {
+			const sliderConfig = {
+				slidesPerView: 1.2,
+				spaceBetween: 10,
+				loop: true,
+				speed: {{ speed}},
+				allowTouchMove: false,
+				freeMode: false,
+      	grabCursor: false,
+				autoplay: {
+					delay: 1,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+					reverseDirection: {{ reverse_dir }}
+				},
+				breakpoints: {
+        575: { slidesPerView: 2, spaceBetween: 15 },
+        768: { slidesPerView: 2.5, spaceBetween: 20 },
+        992: { slidesPerView: 3, spaceBetween: 25 },
+        1200: { slidesPerView: 4, spaceBetween: 35 },
+        1441: { slidesPerView: 4.5, spaceBetween: 4 },
+      },
+			};
+
+			swiperSlider.config = sliderConfig;
+		}
+	});
+</script>
+
+{% schema %}
+	{
+		"name": "Marquee Announcement",
+		"class": "cow-marquee-announcement",
+		"tag": "section",
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "section_colors",
+				"label": "Section Color Scheme",
+				"default": "background-1"
+			},
+			{
+				"type": "text_alignment",
+				"id": "text_alignment",
+				"label": "Text Alignment",
+				"default": "center"
+			},
+			{
+        "type": "header",
+        "content": "Marquee Settings"
+      },
+			{
+				"type": "select",
+				"id": "marquee_direction",
+				"label": "Marquee Direction",
+				"options": [
+					{ "value": "left", "label": "Left to Right" },
+					{ "value": "right", "label": "Right to Left" }
+				],
+				"default": "left"
+			},
+			{
+				"type": "range",
+				"id": "marquee_speed",
+				"label": "Marquee Speed",
+				"unit": "s",
+				"min": 1,
+				"max": 10,
+				"step": 1,
+				"default": 6
+			},
+			{
+        "type": "header",
+        "content": "Section spacing",
+        "info": "Top and bottom padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_desk",
+        "label": "Dektop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 100,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_lap",
+        "label": "Laptop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 80,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_tab",
+        "label": "Tablet",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 60,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_mob",
+        "label": "Mobile",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 40,
+				"info": "Padding"
+      }
+		],
+		"blocks": [
+			{
+				"type": "marq_item",
+				"name": "Announcement Item",
+				"settings": [
+					{
+						"type": "text",
+						"id": "text",
+						"default": "Announcement",
+						"label": "Announcement Label"
+					},
+					{
+						"type":"header",
+						"content":"Icon Settings"
+					},
+					{
+						"type": "checkbox",
+						"id": "show_ico",
+						"label": "Show Icon",
+						"default": false
+					},
+					{
+						"type": "liquid",
+						"id": "svg_ico",
+						"label": "Paste SVG icon code here",
+						"default": "SVG code"
+					},
+					{
+						"type": "paragraph",
+						"content": "----- OR -----"
+					},
+					{
+						"type": "image_picker",
+						"id": "icon",
+						"label": "Add Icon Image"
+					}
+				]
+			}
+		],
+		"presets": [
+			{
+				"name":"Marquee Announcement",
+				"category":"Custom Section",
+				"blocks": [
+					{ "type": "marq_item" },
+					{ "type": "marq_item" },
+					{ "type": "marq_item" },
+					{ "type": "marq_item" },
+					{ "type": "marq_item" },
+				]
+			}
+		]
+	}
+{% endschema %}

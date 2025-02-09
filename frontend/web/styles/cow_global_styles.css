@@ -63,22 +63,31 @@ swiper-slider.grid-view .swiper-wrapper {
 	@apply ts-grid ts-grid-cols-2 ts-gap-x-4 ts-gap-y-12;
 }
 footer .footer__blocks-wrapper {
-	@apply ts-grid ts-grid-cols-1 md:ts-grid-cols-4 lg:ts-grid-cols-9 ts-gap-y-8;
+	@apply md:!ts-grid !ts-flex ts-grid-cols-none md:ts-grid-cols-3 lg:ts-grid-cols-9 md:!ts-gap-y-16 !ts-gap-y-12;
 }
 footer .footer__blocks-wrapper .footer-block {
-	@apply !ts-w-full;
+	@apply !ts-w-full !ts-m-0;
 }
 footer .footer__blocks-wrapper .footer-block__heading {
 	@apply ts-uppercase ts-font-bold md:ts-text-size_md ts-text-[1.5rem] !ts-mb-0;
 }
 footer .footer__blocks-wrapper .footer-block--image {
- @apply ts-col-start-1 ts-col-end-4;
+ @apply ts-col-start-1 ts-col-end-4 sm-mobile:ts-order-1;
+}
+footer .footer__blocks-wrapper .footer-block--image .footer-block-image {
+	@apply ts-block;
+}
+footer .footer-block--image .footer-block__image-wrapper {
+	@apply xl:!ts-max-w-[29.5rem] !ts-max-w-[22.5rem] !ts-mb-0;
+}
+footer .footer__blocks-wrapper .footer-block--menu {
+	@apply sm-mobile:ts-order-3;
 }
 footer .footer-block--menu .list-menu__item--link {
-	@apply ts-text-size_sm ts-leading-none ts-py-0 ts-text-[rgba(var(--color-foreground))] ;
+	@apply ts-text-size_sm ts-leading-[1.8] ts-py-0 ts-text-[rgba(var(--color-foreground))] ;
 }
 footer .footer__blocks-wrapper .footer-block--newsletter {
- @apply ts-col-start-7 ts-col-end-10 ts-mt-0 ts-items-start;
+ @apply lg:ts-col-start-7 xl:ts-col-end-10 lg:ts-col-end-[17] ts-col-start-1 ts-col-end-10 ts-mt-0 ts-items-start sm-mobile:ts-order-2;
 }
 footer .footer-block--newsletter .footer-block__newsletter {
 	@apply ts-text-left lg:ts-ml-[5vw];
@@ -105,4 +114,19 @@ footer .footer__content-bottom {
 }
 footer .footer__content-bottom.scroll-trigger--offscreen {
 	@apply ts-pb-32
+}
+
+@media only screen and (max-width: 991px) {
+	footer .footer__blocks-wrapper {
+		@apply !ts-mb-12;
+	}
+	footer .footer__blocks-wrapper .footer-block--newsletter {
+		@apply ts-row-start-2;
+	}
+	footer .footer__blocks-wrapper .footer-block--menu {
+		@apply ts-row-start-3;
+	}
+	footer .footer__blocks-wrapper .footer-block__details-content {
+		@apply ts-mb-0
+	}
 }

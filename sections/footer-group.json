@@ -137,6 +137,7 @@
         "newsletter_subtext": "<p>Subscribe to get our weekly newsletter.<\/p>",
         "enable_follow_on_shop": false,
         "show_social": true,
+        "social_heading": "Follow Us",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": false,

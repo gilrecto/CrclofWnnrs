@@ -19,7 +19,9 @@ iframe#preview-bar-iframe {
 .btn-text-only {
 	@apply ts-text-size_sm ts-uppercase ts-font-normal hover:ts-font-bold hover:ts-underline ts-transition-all ts-duration-300 ts-ease-linear;
 }
-
+a, button, .btn, input[type="submit"] {
+	@apply ts-transition-all ts-duration-300 ts-ease-linear hover:!ts-text-accent;
+}
 .custom-section {
 	@apply xl:ts-py-[var(--padding-xl)] lg:ts-py-[var(--padding-lg)] md:ts-py-[var(--padding-md)] ts-py-[var(--padding-sm)] ts-px-0 ts-overflow-hidden;
 }
@@ -66,12 +68,41 @@ footer .footer__blocks-wrapper {
 footer .footer__blocks-wrapper .footer-block {
 	@apply !ts-w-full;
 }
+footer .footer__blocks-wrapper .footer-block__heading {
+	@apply ts-uppercase ts-font-bold md:ts-text-size_md ts-text-[1.5rem] !ts-mb-0;
+}
 footer .footer__blocks-wrapper .footer-block--image {
  @apply ts-col-start-1 ts-col-end-4;
+}
+footer .footer-block--menu .list-menu__item--link {
+	@apply ts-text-size_sm ts-leading-none ts-py-0 ts-text-[rgba(var(--color-foreground))] ;
 }
 footer .footer__blocks-wrapper .footer-block--newsletter {
  @apply ts-col-start-7 ts-col-end-10 ts-mt-0 ts-items-start;
 }
 footer .footer-block--newsletter .footer-block__newsletter {
 	@apply ts-text-left lg:ts-ml-[5vw];
+}
+footer .footer-block--newsletter .footer__newsletter .field__input {
+	@apply ts-py-5 ts-px-0 ts-border-b ts-border-b-[rgba(var(--color-foreground))] hover:ts-border-b-accent focus:ts-border-b-accent ts-border-solid !ts-outline-none !ts-shadow-none;
+	@apply placeholder:ts-opacity-100 placeholder:ts-text-[rgba(var(--color-foreground))] placeholder:ts-uppercase;
+}
+footer .footer-block--newsletter .footer__newsletter .newsletter-form__button {
+	@apply ts-relative ts-w-auto ts-py-4 ts-px-12 ts-rounded-full ts-border ts-border-solid ts-border-accent ts-bg-accent ts-text-white ts-uppercase ts-mt-8 hover:ts-bg-transparent hover:ts-text-accent;
+}
+footer .footer-block--social .footer__list-social {
+	@apply !ts-justify-start ts-gap-[1.4rem];
+}
+footer .footer-block--social .footer__list-social a {
+	@apply !ts-p-0;
+}
+footer .footer-block--social .footer__list-social .list-social__item .svg-wrapper,
+footer .footer-block--social .footer__list-social .list-social__item .icon {
+	@apply ts-w-10 ts-h-10;
+}
+footer .footer__content-bottom {
+	@apply ts-flex ts-flex-row-reverse;
+}
+footer .footer__content-bottom.scroll-trigger--offscreen {
+	@apply ts-pb-32
 }

@@ -28,17 +28,19 @@
 <div class="disclosure">
   <button
     type="button"
-    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+    class="disclosure__button localization-form__select localization-selector link link--text caption-large before:ts-content-none after:ts-content-none ts-text-size_sm ts-no-underline ts-font-bold ts-uppercase ts-flex ts-items-center"
     aria-expanded="false"
     aria-controls="{{ localPosition }}-country-results"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>
-      {{- localization.country.name }} |
-      {{ localization.country.currency.iso_code }}
-      {{ localization.country.currency.symbol -}}
+    <span class="svg-wrapper ts-mr-2">
+      {{ 'icon-globe.svg' | inline_asset_content }}
     </span>
-    {{ 'icon-caret.svg' | inline_asset_content }}
+    <span>{{- localization.country.name }}</span>
+    <span class="svg-wrapper ts-block ts-w-auto ts-h-auto ts-ml-[0.6rem] ts-mb-[0.4rem] *:!ts-w-4 *:!ts-h-4">
+      {{ 'icon-caret-solid.svg' | inline_asset_content }}
+    </span>
+    <span class="country-code ts-ml-5">{{ localization.country.iso_code }}</span>
   </button>
   <div class="disclosure__list-wrapper country-selector" hidden>
     <div class="country-filter{% unless show_country_filter %} country-filter--no-padding{% endunless %}">

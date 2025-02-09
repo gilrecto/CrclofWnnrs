@@ -2,6 +2,95 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "cow_marquee_slide_iRfXxH": {
+      "type": "cow__marquee_slide",
+      "blocks": {
+        "marq_item_neXJin": {
+          "type": "marq_item",
+          "settings": {
+            "text": "DELIVERY WITHIN 1-3 BUSINESS DAYS",
+            "show_ico": true,
+            "svg_ico": "🚐"
+          }
+        },
+        "marq_item_fXHXF4": {
+          "type": "marq_item",
+          "settings": {
+            "text": "FREE SHIPPING ON ORDERS OVER $200",
+            "show_ico": true,
+            "svg_ico": "📦"
+          }
+        },
+        "marq_item_EyJ9kn": {
+          "type": "marq_item",
+          "settings": {
+            "text": "DELIVERY WITHIN 1-3 BUSINESS DAYS",
+            "show_ico": true,
+            "svg_ico": "🚐"
+          }
+        },
+        "marq_item_eHrFXP": {
+          "type": "marq_item",
+          "settings": {
+            "text": "FREE SHIPPING ON ORDERS OVER $200",
+            "show_ico": true,
+            "svg_ico": "📦"
+          }
+        },
+        "marq_item_NmmKt4": {
+          "type": "marq_item",
+          "settings": {
+            "text": "DELIVERY WITHIN 1-3 BUSINESS DAYS",
+            "show_ico": true,
+            "svg_ico": "🚐"
+          }
+        },
+        "marq_item_kWQEgQ": {
+          "type": "marq_item",
+          "settings": {
+            "text": "FREE SHIPPING ON ORDERS OVER $200",
+            "show_ico": true,
+            "svg_ico": "📦"
+          }
+        },
+        "marq_item_V3zbTB": {
+          "type": "marq_item",
+          "settings": {
+            "text": "DELIVERY WITHIN 1-3 BUSINESS DAYS",
+            "show_ico": true,
+            "svg_ico": "🚐"
+          }
+        },
+        "marq_item_FPXDkn": {
+          "type": "marq_item",
+          "settings": {
+            "text": "FREE SHIPPING ON ORDERS OVER $200",
+            "show_ico": true,
+            "svg_ico": "📦"
+          }
+        }
+      },
+      "block_order": [
+        "marq_item_neXJin",
+        "marq_item_fXHXF4",
+        "marq_item_EyJ9kn",
+        "marq_item_eHrFXP",
+        "marq_item_NmmKt4",
+        "marq_item_kWQEgQ",
+        "marq_item_V3zbTB",
+        "marq_item_FPXDkn"
+      ],
+      "settings": {
+        "section_colors": "scheme-2",
+        "text_alignment": "center",
+        "marquee_direction": "right",
+        "marquee_speed": 4,
+        "pad_desk": 20,
+        "pad_lap": 20,
+        "pad_tab": 20,
+        "pad_mob": 20
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -16,21 +105,21 @@
         "link_list_LLG9Fz": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "",
             "menu": "footer"
           }
         },
         "link_list_GCXRyK": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "",
             "menu": "footer"
           }
         },
         "link_list_GTVwWY": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "",
             "menu": "footer"
           }
         }
@@ -59,6 +148,7 @@
     }
   },
   "order": [
+    "cow_marquee_slide_iRfXxH",
     "footer"
   ]
 }

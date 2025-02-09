@@ -49,7 +49,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width md:!ts-px-12">
+      <div class="footer__content-top page-width md:!ts-px-12 lg:!ts-pb-12 !ts-pb-6">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -167,7 +167,7 @@
                 <div class="footer-block__newsletter">
                   <div class="newsletter-headings ts-mb-6">
                     {%- if section.settings.newsletter_heading != blank -%}
-                      <h2 class="footer-block__heading inline-richtext ts-uppercase ts-font-bold ts-text-size_md !ts-mb-0">{{ section.settings.newsletter_heading }}</h2>
+                      <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
                     {%- endif -%}
                     {%- if section.settings.newsletter_subtext != blank -%}
                       <div class="footer-block__details-content rte ts-uppercase ts-text-[1.5rem]">{{ section.settings.newsletter_subtext }}</div>
@@ -175,8 +175,11 @@
                   </div>
                   {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form !ts-max-w-full !ts-mx-0' -%}
                     <input type="hidden" name="contact[tags]" value="newsletter">
-                    <div class="newsletter-form__field-wrapper">
-                      <div class="field">
+                    <div class="newsletter-form__field-wrapper !ts-max-w-[42rem]">
+                      <div class="field-wrapper">
+                        <label class="field__label ts-sr-only" for="NewsletterForm--{{ section.id }}">
+                          {{ 'newsletter.label' | t }}
+                        </label>
                         <input
                           id="NewsletterForm--{{ section.id }}"
                           type="email"
@@ -197,19 +200,17 @@
                           placeholder="{{ 'newsletter.label' | t }}"
                           required
                         >
-                        <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                          {{ 'newsletter.label' | t }}
-                        </label>
                         <button
                           type="submit"
-                          class="newsletter-form__button field__button"
+                          class="newsletter-form__button field__button button--primary"
                           name="commit"
                           id="Subscribe"
                           aria-label="{{ 'newsletter.button_label' | t }}"
                         >
-                          <span class="svg-wrapper">
+                        {{ 'newsletter.button_label' | t }}
+                          {% comment %} <span class="svg-wrapper">
                             {{- 'icon-arrow.svg' | inline_asset_content -}}
-                          </span>
+                          </span> {% endcomment %}
                         </button>
                       </div>
                       {%- if form.errors -%}
@@ -250,6 +251,9 @@
           {%- endif -%}
 
           {%- if section.settings.show_social and has_social_icons -%}
+            {%- if section.settings.social_heading != blank -%}
+              <h2 class="footer-social-heading inline-richtext ts-mb-6 ts-text-size_sm ts-uppercase ts-font-bold">{{ section.settings.social_heading }}</h2>
+            {%- endif -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
         </div>
@@ -258,29 +262,29 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} !ts-border-t !ts-border-solid !ts-border-t-[rgba(var(--color-foreground))]"
+    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} !ts-border-t !ts-border-solid !ts-border-t-[rgba(var(--color-foreground))] !ts-pt-8"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
     <div class="footer__content-bottom-wrapper page-width md:!ts-px-12">
-      <div class="footer__column footer__localization isolate">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+      <div class="footer__column footer__localization isolate !ts-justify-center ts-gap-5 !ts-p-0">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 0 -%}
           <localization-form>
             {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
               <div>
-                <h2 class="caption-large text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                <h2 class="caption-large text-body ts-sr-only" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
                 {%- render 'country-localization', localPosition: 'FooterCountry' -%}
               </div>
             {%- endform -%}
           </localization-form>
         {%- endif -%}
 
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 0 -%}
           <localization-form>
             {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
               <div>
-                <h2 class="caption-large text-body" id="FooterLanguageLabel">
+                <h2 class="caption-large text-body ts-sr-only" id="FooterLanguageLabel">
                   {{ 'localization.language_label' | t }}
                 </h2>
                 {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
@@ -304,12 +308,12 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %} md:!ts-px-12">
-      <div class="footer__copyright caption">
+    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %} md:!ts-px-12 ts-items-center">
+      <div class="footer__copyright caption !ts-mt-0">
         <small class="copyright__content ts-uppercase !ts-text-size_sm"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content ts-uppercase !ts-text-size_sm">{{ powered_by_link }}</small>
+        {% comment %} <small class="copyright__content ts-uppercase !ts-text-size_sm">{{ powered_by_link }}</small> {% endcomment %}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -485,6 +489,11 @@
       "id": "show_social",
       "default": true,
       "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "social_heading",
+      "label": "Social Heading"
     },
     {
       "type": "header",

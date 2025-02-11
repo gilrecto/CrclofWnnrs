@@ -106,21 +106,21 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "footer"
+            "menu": "footer-menu-1"
           }
         },
         "link_list_GCXRyK": {
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "footer"
+            "menu": "footer-menu-2"
           }
         },
         "link_list_GTVwWY": {
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "footer"
+            "menu": "footer-menu-3"
           }
         }
       },

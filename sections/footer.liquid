@@ -271,7 +271,7 @@
       <div class="footer__column footer__localization isolate !ts-justify-center ts-gap-5 !ts-p-0">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 0 -%}
           <localization-form>
-            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form !ts-block !ts-m-0 !ts-p-0' -%}
               <div>
                 <h2 class="caption-large text-body ts-sr-only" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
                 {%- render 'country-localization', localPosition: 'FooterCountry' -%}
@@ -282,7 +282,7 @@
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 0 -%}
           <localization-form>
-            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form !ts-block !ts-m-0 !ts-p-0' -%}
               <div>
                 <h2 class="caption-large text-body ts-sr-only" id="FooterLanguageLabel">
                   {{ 'localization.language_label' | t }}

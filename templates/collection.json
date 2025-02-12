@@ -3,7 +3,10 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "collection_name": "Shop collection",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
@@ -11,26 +14,154 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 36,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
+        "text_alignment": "center",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
-        "enable_sorting": true,
+        "enable_sorting": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_Xh7eFV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p4g7iA": {
+          "type": "heading",
+          "settings": {
+            "heading": "EMPOWER OTHERS; BRING IT BACK TO THE TABLE.",
+            "heading_size": "ts-text-clamp_xl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p4g7iA"
+      ],
+      "custom_css": [
+        "h2.rich-text__heading.rte {font-family: \"Vincent\", \"sans-serif\";}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "content_width": 120,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "cow_instagram_post_ipzCBr": {
+      "type": "cow_instagram_post",
+      "blocks": {
+        "post_m9EyJH": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_1.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/B-qvoF-hDch\/"
+          }
+        },
+        "post_GpkTVz": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_2.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/CQhg0k9BOiO\/"
+          }
+        },
+        "post_iCXQMg": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_3.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/CJG6THeninQ\/"
+          }
+        },
+        "post_9Tt9VV": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_4.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/CQuS0Tghcr-\/?img_index=1"
+          }
+        },
+        "post_rnHfV4": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_5.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/B5VNsrIhnzT\/?img_index=1"
+          }
+        },
+        "post_qWQwbm": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_6.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/CVRRxuZvGI7\/"
+          }
+        },
+        "post_BbY9TT": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_7.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/CfoySi-lWbZ\/"
+          }
+        },
+        "post_zwwFzy": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/post_8.jpg",
+            "insta_link": "https:\/\/www.instagram.com\/p\/Cf_69Zvr-zy\/?img_index=1"
+          }
+        }
+      },
+      "block_order": [
+        "post_m9EyJH",
+        "post_GpkTVz",
+        "post_iCXQMg",
+        "post_9Tt9VV",
+        "post_rnHfV4",
+        "post_qWQwbm",
+        "post_BbY9TT",
+        "post_zwwFzy"
+      ],
+      "settings": {
+        "section_colors": "",
+        "title": "",
+        "title_size": "ts-text-clamp_l",
+        "body": "<p>@crclofwnnr<\/p>",
+        "show_social": false,
+        "text_alignment": "right",
+        "d_slides": 6,
+        "l_slides": 5,
+        "t_slides": 3,
+        "m_slides": 2.5,
+        "d_space": 12,
+        "l_space": 12,
+        "t_space": 10,
+        "m_space": 8,
+        "enable_loop": true,
+        "mousewheel": true,
+        "enable_autoplay": true,
+        "autoplay_speed": 5000,
+        "enable_navigation": false,
+        "enable_pagination": false,
+        "destroy_swiper": false,
+        "pad_desk": 30,
+        "pad_lap": 30,
+        "pad_tab": 20,
+        "pad_mob": 20
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "rich_text_Xh7eFV",
+    "cow_instagram_post_ipzCBr"
   ]
 }

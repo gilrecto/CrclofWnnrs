@@ -18,6 +18,8 @@
 	}
 
 	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
+		display: flex;
+		flex-wrap: nowrap;
 		column-gap: {{ setting.m_space }}px;
 	}
 	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper .swiper-slide {
@@ -26,7 +28,6 @@
 
 	@media only screen and (min-width: 768px) {
 		#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
-			flex-wrap: nowrap;
 			column-gap: {{ setting.t_space }}px;
 		}
 		#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper .swiper-slide {

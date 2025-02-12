@@ -90,7 +90,7 @@
 }
 
 .card-information {
-  text-align: var(--text-alignment);
+  text-align: var(--text-align);
 }
 
 .card__media,
@@ -137,6 +137,7 @@
 .card__information {
   grid-row-start: 2;
   padding: 1.3rem 1rem;
+  text-align: var(--text-align);
 }
 
 .card:not(.ratio) > .card__content {

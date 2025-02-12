@@ -2,7 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/store_logo.png",
     "logo_width": 210,
-    "favicon": "shopify:\/\/shop_images\/store_logo.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "type_header_font": "archivo_n7",
     "heading_scale": 100,
     "type_body_font": "archivo_n4",
@@ -10,8 +10,8 @@
     "page_width": 1200,
     "fluid": true,
     "spacing_sections": 0,
-    "spacing_grid_horizontal": 8,
-    "spacing_grid_vertical": 8,
+    "spacing_grid_horizontal": 28,
+    "spacing_grid_vertical": 40,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
@@ -160,12 +160,12 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
+          "text": "#005514",
+          "button": "#005514",
           "button_label": "#000000",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#005514",
           "shadow": "#121212"
         }
       },

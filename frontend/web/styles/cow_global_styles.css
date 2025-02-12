@@ -115,6 +115,12 @@ footer .footer__content-bottom {
 footer .footer__content-bottom.scroll-trigger--offscreen {
 	@apply ts-pb-32
 }
+swiper-slider .instagram-posts-swiper .svg-wrapper {
+	@apply ts-absolute ts-top-0 ts-w-full ts-h-full ts-bg-black ts-bg-opacity-60 ts-flex ts-items-center ts-justify-center ts-pointer-events-none ts-opacity-0 ts-transition-all ts-duration-300 ts-ease-in-out [&>*]:ts-w-10 [&>*]:ts-h-auto [&>*]:ts-text-white
+}
+swiper-slider .instagram-posts-swiper .img-wrapper.media {
+	@apply !ts-aspect-square;
+}
 
 @media only screen and (max-width: 991px) {
 	footer .footer__blocks-wrapper {

@@ -1,6 +1,9 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  #shopify-section-{{ section.id }} {
+    --content-max-width: {{ section.settings.content_width }}rem;
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -151,6 +154,16 @@
       "default": "scheme-1"
     },
     {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content Wrapper Width",
+      "min": 40,
+      "max": 180,
+      "step": 4,
+      "unit": "rem",
+      "default": 80
+    },
+    {
       "type": "checkbox",
       "id": "full_width",
       "default": true,
@@ -196,30 +209,34 @@
         {
           "type": "select",
           "id": "heading_size",
+          "label": "Heading Size",
           "options": [
             {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
+              "value": "ts-text-clamp_xxl",
+              "label": "2X Large"
             },
             {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
+              "value": "ts-text-clamp_xl",
+              "label": "Extra Large"
             },
             {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
+              "value": "ts-text-clamp_l",
+              "label": "Large"
             },
             {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
+              "value": "ts-text-size_lg",
+              "label": "Medium"
             },
             {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
+              "value": "ts-text-size_md",
+              "label": "Small"
+            },
+            {
+              "value": "ts-text-size_sm",
+              "label": "Extra Small"
             }
           ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "default": "ts-text-clamp_xxl"
         }
       ]
     },

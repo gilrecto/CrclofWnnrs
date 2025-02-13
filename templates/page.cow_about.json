@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_GCTWaj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GVJ3yB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who we Are",
+            "heading_size": "ts-text-size_lg",
+            "text_transform": "ts-uppercase"
+          }
+        },
+        "text_VzJrnJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to CRCL OF WNNRS, where ambition meets community. We are more than a brand—we are a movement that celebrates resilience, growth, and the pursuit of greatness.<\/p><p>At our core, we believe success is a journey best traveled together. Our circle is built on the principles of empowerment, collaboration, and authenticity. Every product, event, and connection we create is a testament to our mission: to inspire individuals to reach their fullest potential and uplift others along the way.<\/p><p>From humble beginnings to an ever-expanding global community, CRCL OF WNNRS is driven by a passion for excellence and the power of unity. We are here to redefine what it means to win, transforming individual victories into collective achievements.<\/p><p><strong>Join the circle. Embrace the vision. Together, we are unstoppable.<\/strong><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GVJ3yB",
+        "text_VzJrnJ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/post_4.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "container_width": 145,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 64,
+        "padding_bottom": 76
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_GCTWaj"
+  ]
+}

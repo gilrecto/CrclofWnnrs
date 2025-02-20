@@ -121,6 +121,15 @@ swiper-slider .instagram-posts-swiper .svg-wrapper {
 swiper-slider .instagram-posts-swiper .img-wrapper.media {
 	@apply !ts-aspect-square;
 }
+.image-text-slider .swiper-pagination {
+	@apply ts-flex ts-items-center ts-justify-center ts-gap-[1.3rem] md:ts-px-14 ts-px-8 ts-mb-8;
+}
+.image-text-slider .swiper-pagination .swiper-pagination-bullet {
+	@apply ts-bg-[#666666] ts-flex-1 ts-h-[0.3rem] ts-rounded-none ts-opacity-40 ts-m-0;
+}
+.image-text-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	@apply ts-opacity-100;
+}
 
 @media only screen and (max-width: 991px) {
 	footer .footer__blocks-wrapper {

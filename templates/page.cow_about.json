@@ -2,9 +2,51 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "cow_image_text_slider_bCjCH6": {
+      "type": "cow_image_text_slider",
+      "blocks": {
+        "text_a9xTAw": {
+          "type": "text",
+          "settings": {
+            "content": "<p>MAKE NO MISTAKE.<br\/>THIS IS NOT ANOTHER CLUB.<br\/>THIS IS A CRCL.<br\/>SEE, CLUBS ARE ALL ABOUT RULES AND DUES<br\/>AND WE'RE ONLY ABOUT WINNING.<br\/>SO NAYSAYERS NEED NOT APPLY.<br\/>WE DON'T HAVE TIME FOR NOISE,<br\/>WE CAN'T HEAR IT FROM INSIDE THE CRCL.<br\/>BECAUSE IN HERE, A TEAM MENTALITY TAKES HOLD.<br\/>BONDS BECOME UNBREAKABLE,<br\/>CONFIDENCE BECOMES CONTAGIOUS,<br\/>AND WINNING BECOMES A WAY OF LIFE.<\/p>"
+          }
+        },
+        "text_9hcc4m": {
+          "type": "text",
+          "settings": {
+            "content": "<p>WHICH NEVER GETS OLD, <br\/>AND NEITHER DO WE.<br\/>AND L'S...<br\/>WELL THOSE ARE LESSONS LEARNED.<br\/>SO WE DON'T ENTERTAIN OUR FOES, WE FEED OFF THEM.<br\/>COLLECTING W'S LIKE STAMPS ON OUR PASSPORTS.<br\/>WE RE-UP, THEN REPEAT...<\/p>"
+          }
+        },
+        "text_ynWQtX": {
+          "type": "text",
+          "settings": {
+            "content": "<p>UNTIL THE BAR GETS HIGHER,<br\/>THE VIEWS GET BETTER, <br\/>THE CRCL GETS TIGHTER,<br\/>AND THE WINS GET BIGGER.<\/p>"
+          }
+        },
+        "text_6NN7hK": {
+          "type": "text",
+          "settings": {
+            "content": "<p>AND ONCE YOU'RE A WNNR YOU'RE WITH US FOR GOOD.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_a9xTAw",
+        "text_9hcc4m",
+        "text_ynWQtX",
+        "text_6NN7hK"
+      ],
+      "settings": {
+        "section_colors": "scheme-4",
+        "top_space": 3,
+        "image": "shopify:\/\/shop_images\/about_img.jpg",
+        "image_position": "left"
       }
     },
     "image_with_text_GCTWaj": {
@@ -50,6 +92,7 @@
   },
   "order": [
     "main",
+    "cow_image_text_slider_bCjCH6",
     "image_with_text_GCTWaj"
   ]
 }

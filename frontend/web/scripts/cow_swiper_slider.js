@@ -39,7 +39,7 @@ class SwiperSlider extends HTMLElement {
       freeMode: true,
       grabCursor: true,
       breakpoints: {
-        575: { slidesPerView: 2, spaceBetween: 15 },
+        576: { slidesPerView: 2, spaceBetween: 15 },
         768: { slidesPerView: 2.5, spaceBetween: 20 },
         992: { slidesPerView: 3, spaceBetween: 25 },
         1200: { slidesPerView: 5, spaceBetween: 35 },

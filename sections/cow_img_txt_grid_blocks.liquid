@@ -1,0 +1,54 @@
+{% assign setting = section.settings %}
+{%- style -%}
+	#shopify-section-{{ section.id }} {
+		--pt: {{ setting.top_space | append: 'rem' }};
+	}
+
+	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
+    display: flex;
+    width: max-content;
+		flex-wrap: nowrap;
+		column-gap: 3rem;
+	}
+{%- endstyle -%}
+
+{% schema %}
+	{
+		"name": "Image Text Grid Blocks",
+		"class": "cow-img-txt-grid-blocks",
+		"tag": "section",
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "section_colors",
+				"label": "Section Color Scheme",
+				"default": "background-1"
+			},
+			{
+				"type": "range",
+				"id": "top_space",
+				"label": "Top Spacing",
+				"min": 0,
+				"max": 10,
+				"step": 0.5,
+				"unit": "rem",
+				"default": 3
+			},
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			},
+			{
+				"type": "select",
+				"id": "image_position",
+				"label": "Image Position",
+				"options": [
+					{ "value": "left", "label": "Left" },
+					{ "value": "right", "label": "Right" }
+				],
+				"default": "left"
+			}
+		]
+	}
+{% endschema %}

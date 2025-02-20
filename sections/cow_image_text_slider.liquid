@@ -1,0 +1,151 @@
+{% assign setting = section.settings %}
+{%- style -%}
+	#shopify-section-{{ section.id }} {
+		--pt: {{ setting.top_space | append: 'rem' }};
+	}
+
+	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
+    display: flex;
+    width: max-content;
+		flex-wrap: nowrap;
+		column-gap: 3rem;
+	}
+{%- endstyle -%}
+
+<div class="image-text-slider ts-pt-[var(--pt)]">
+	<div class="page-width md:!ts-px-12">
+		<div class="img-txt-slider-wrapper ts-grid ts-grid-cols-1{% if section.blocks.size > 0 %} lg:ts-grid-cols-2{% endif %}">
+			<div class="img-colmn{% if setting.image_position == 'right' %} lg:ts-order-2{% endif %} *:ts-h-full *:ts-w-full">
+				{%- if setting.image != blank -%}
+					{% render 'image', image: setting.image, section: section, class: 'slider-img' %}
+				{%- else -%}
+					<div class="img-wrapper media ts-h-full">
+						{{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+					</div>
+				{%- endif -%}
+			</div>
+
+			{%- if section.blocks.size > 0 -%}
+				<div class="txt-slider-colmn{% if setting.image_position == 'right' %} lg:ts-order-1{% endif %} color-{{ setting.section_colors }} ts-relative ts-px-8 lg:ts-py-24 ts-pt-12 ts-pb-20">
+					<swiper-slider>
+						<div class="swiper img-txt--swiper">
+							<div class="swiper-wrapper">
+								{%- for block in section.blocks -%}
+									{%- if block.settings.content != blank -%}
+										<div class="swiper-slide ts-select-none" {{ block.shopify_attributes }}>
+											<div class="rte block-content ts-font-vincent ts-text-clamp_l ts-leading-[1.15] mobile:ts-text-[2.2rem]">
+												{{ block.settings.content }}
+											</div>
+										</div>
+									{%- endif -%}
+								{%- endfor -%}
+							</div>
+						</div>
+
+						<div class="swiper-pagination bullets--{{ section.id }}"></div>
+					</swiper-slider>
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" defer>
+	document.addEventListener('DOMContentLoaded', () => {
+		const swiperSlider = document.querySelector('#shopify-section-{{ section.id }} swiper-slider');
+		
+		if (swiperSlider) {
+			const sliderConfig = {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				loop: true,
+				freeMode: false,
+      	grabCursor: true,
+				autoHeight: true,
+				autoplay: {
+					delay: 5000,
+					pauseOnMouseEnter: true
+				},
+				breakpoints: {
+					576: { slidesPerView:1, spaceBetween: 10 },
+					768: { slidesPerView: 1, spaceBetween: 10 },
+					992: { slidesPerView: 1, spaceBetween: 10, autoHeight: false },
+					1200: { slidesPerView: 1, spaceBetween: 10 },
+					1441: { slidesPerView: 1, spaceBetween: 10 },
+				},
+				pagination: {
+					el: ".bullets--{{ section.id }}",
+					clickable: true
+				},
+			};
+
+			swiperSlider.config = sliderConfig;
+		}
+	});
+</script>
+
+{% schema %}
+	{
+		"name": "Image Text Slider",
+		"class": "cow-image-text-slider",
+		"tag": "section",
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "section_colors",
+				"label": "Section Color Scheme",
+				"default": "background-1"
+			},
+			{
+				"type": "range",
+				"id": "top_space",
+				"label": "Top Spacing",
+				"min": 0,
+				"max": 10,
+				"step": 0.5,
+				"unit": "rem",
+				"default": 3
+			},
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			},
+			{
+				"type": "select",
+				"id": "image_position",
+				"label": "Image Position",
+				"options": [
+					{ "value": "left", "label": "Left" },
+					{ "value": "right", "label": "Right" }
+				],
+				"default": "left"
+			}
+		],
+		"blocks": [
+			{
+				"name": "Text Content",
+				"type": "text",
+				"settings": [
+					{
+						"type": "richtext",
+						"id": "content",
+						"label": "Content",
+						"default": "<p>Content goes here</p>"
+					}
+				]
+			}
+		],
+		"presets": [
+			{
+				"name": "Image Text Slider",
+				"category": "Image",
+				"blocks": [
+					{ "type": "text" },
+					{ "type": "text" },
+					{ "type": "text" }
+				]
+			}
+		]
+	}
+{% endschema %}

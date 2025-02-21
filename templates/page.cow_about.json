@@ -1,13 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "cow_image_text_slider_bCjCH6": {
       "type": "cow_image_text_slider",
       "blocks": {
@@ -86,13 +78,68 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 64,
-        "padding_bottom": 76
+        "padding_bottom": 24
+      }
+    },
+    "cow_img_txt_grid_blocks_ExgN8Q": {
+      "type": "cow_img_txt_grid_blocks",
+      "blocks": {
+        "text_bCpwVN": {
+          "type": "text",
+          "settings": {
+            "block_colors": "scheme-5",
+            "text_alignment": "center",
+            "title": "MISSION",
+            "title_size": "ts-text-size_lg",
+            "content": "<p>A GLOBALLY ACCESSIBLE, RESOURCE-RICH ECOSYSTEM WHERE CREATORS CAN ACCESS BOTH SOCIAL AND HARD CAPITAL TO FUEL THEIR JOURNEY IN REDEFINING THE WORLD<\/p>",
+            "txt_size": "ts-text-size_sm"
+          }
+        },
+        "image_picker_hbDznG": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grid_img1.jpg"
+          }
+        },
+        "text_rdYnRG": {
+          "type": "text",
+          "settings": {
+            "block_colors": "scheme-4",
+            "text_alignment": "center",
+            "title": "VISION",
+            "title_size": "ts-text-size_sm",
+            "content": "<p>EMPOWERING WINNERS WORLDWIDE BY DELIVERING A BRAND THAT ADDS SIGNIFICANT VALUE TO THEIR LIVES<\/p>",
+            "txt_size": "ts-text-size_md"
+          }
+        },
+        "image_picker_zjYdAy": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grid_img2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_bCpwVN",
+        "image_picker_hbDznG",
+        "text_rdYnRG",
+        "image_picker_zjYdAy"
+      ],
+      "settings": {
+        "section_colors": "",
+        "desk_colmns": 4,
+        "lap_colmns": 2,
+        "mob_colmns": 1,
+        "pad_desk": 50,
+        "pad_lap": 50,
+        "pad_tab": 40,
+        "pad_mob": 40
       }
     }
   },
   "order": [
-    "main",
     "cow_image_text_slider_bCjCH6",
-    "image_with_text_GCTWaj"
+    "image_with_text_GCTWaj",
+    "cow_img_txt_grid_blocks_ExgN8Q"
   ]
 }

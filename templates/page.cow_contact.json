@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "cow_main_contact",
+      "blocks": {
+        "faq_Wp3N7J": {
+          "type": "faq",
+          "settings": {
+            "question": "Question goes here",
+            "answer": "<p>Answer goes here<\/p>"
+          }
+        },
+        "faq_yRqRaj": {
+          "type": "faq",
+          "settings": {
+            "question": "Question goes here",
+            "answer": "<p>Answer goes here<\/p>"
+          }
+        },
+        "faq_6JRULg": {
+          "type": "faq",
+          "settings": {
+            "question": "Question goes here",
+            "answer": "<p>Answer goes here<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_Wp3N7J",
+        "faq_yRqRaj",
+        "faq_6JRULg"
+      ],
+      "custom_css": [
+        ".rte strong {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "section_colors": "",
+        "title": "Contact Us",
+        "contact_body": "<p><strong>Press<br\/><\/strong>For all press inquiries, please contact: <a href=\"mailto:press@crclofwnnrs.com\" title=\"mailto:press@crclofwnnrs.com\">press@crclofwnnrs.com<\/a><\/p><p><strong>Wholesale<\/strong><br\/>For all wholesale inquiries, please contact: wholesale@crclofwnnrs.com<\/p><p><strong>For customer inquiries<br\/><\/strong>Please fill out the inquiry box below.\u2028Our customer service is available during the following hours [10 am-6 pm, Monday-Friday]. Please expect a response within [24hr-48hr]. For all tracking inquiries, please combine your questions into one message.<\/p><p><strong>Product care<br\/><\/strong>For fabric care instructions, please refer to the specific fabric page on our website. We provide care instructions based on each fabric to ensure the longevity and quality of our products. Please note that these care instructions are for insurance purposes and to inform our customers.<\/p>",
+        "form_title": "Submit an Inquiry",
+        "faq_enable": true,
+        "faq_title": "Frequently Asked Questions",
+        "pad_desk": 70,
+        "pad_lap": 70,
+        "pad_tab": 60,
+        "pad_mob": 40
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,16 +1,56 @@
 {% assign setting = section.settings %}
 {%- style -%}
 	#shopify-section-{{ section.id }} {
-		--pt: {{ setting.top_space | append: 'rem' }};
-	}
-
-	#shopify-section-{{ section.id }} swiper-slider .swiper:not(.swiper-initialized) .swiper-wrapper {
-    display: flex;
-    width: max-content;
-		flex-wrap: nowrap;
-		column-gap: 3rem;
+		--padding-xl: {{ setting.pad_desk | append: 'px' }};
+		--padding-lg: {{ setting.pad_lap | append: 'px' }};
+		--padding-md: {{ setting.pad_tab | append: 'px' }};
+		--padding-sm: {{ setting.pad_mob | append: 'px' }};
+		--columns: repeat({{ setting.desk_colmns }}, minmax(0, 1fr));
+		--columns-lap: repeat({{ setting.lap_colmns }}, minmax(0, 1fr));
+		--columns-mob: repeat({{ setting.mob_colmns }}, minmax(0, 1fr));
 	}
 {%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+	<div class="img-txt-grid-blocks color-{{ setting.section_colors }} custom-section">
+		<div class="page-width">
+			<div class="img-txt-grid-wrapper ts-grid xxl:ts-grid-cols-[var(--columns)] lg:ts-grid-cols-[var(--columns-lap)] ts-grid-cols-[var(--columns-mob)]">
+				{%- for block in section.blocks -%}
+					{%- assign block_item = block.settings -%}
+
+					{%- if block.type == 'text' -%}
+						<div class="grid-item grid-item--text xl:ts-p-20 md:ts-p-12 ts-p-8 ts-h-full ts-flex ts-items-center color-{{ block_item.block_colors }}" 
+								 style="--text-align: {{ block_item.text_alignment | default: 'center' }};" {{ block.shopify_attributes }}>
+							<div class="grid-item-content text-align ts-flex-1">
+								{%- if block_item.title != blank -%}
+									<h2 class="block-title {{ block_item.title_size }} ts-uppercase ts-mb-8">
+										{{ block_item.title }}
+									</h2>
+								{%- endif -%}
+
+								{%- if block_item.content != blank -%}
+									<div class="rte block-content {{ block_item.txt_size }} ts-uppercase">
+										{{ block_item.content }}
+									</div>
+								{%- endif -%}
+							</div>
+						</div>
+					{%- elsif block.type == 'image_picker' -%}
+						<div class="grid-item grid-item--image *:ts-h-full *:ts-w-full" {{ block.shopify_attributes }}>
+							{%- if block_item.image != blank -%}
+								{% render 'image', image: block_item.image, section: section, class: 'grid-item-image' %}
+							{%- else -%}
+								<div class="grid-item-image media">
+									{{ 'blog-apparel-3' | placeholder_svg_tag: 'placeholder-svg' }}
+								</div>
+							{%- endif -%}
+						</div>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+		</div>
+	</div>
+{%- endif -%}
 
 {% schema %}
 	{
@@ -22,32 +62,181 @@
 				"type": "color_scheme",
 				"id": "section_colors",
 				"label": "Section Color Scheme",
-				"default": "background-1"
+				"default": "scheme-1"
 			},
 			{
-				"type": "range",
-				"id": "top_space",
-				"label": "Top Spacing",
-				"min": 0,
-				"max": 10,
-				"step": 0.5,
-				"unit": "rem",
-				"default": 3
+        "type": "range",
+        "id": "desk_colmns",
+        "label": "Desktop Columns",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "default": 4,
+				"info": "Number of columns in the grid."
+      },
+			{
+        "type": "range",
+        "id": "lap_colmns",
+        "label": "Laptop Columns",
+        "min": 2,
+        "max": 4,
+        "step": 1,
+        "default": 4,
+				"info": "Number of columns in the grid."
+      },
+			{
+        "type": "range",
+        "id": "mob_colmns",
+        "label": "Mobile Columns",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "default": 2,
+				"info": "Number of columns in the grid."
+      },
+			{
+        "type": "header",
+        "content": "Section spacing",
+        "info": "Top and bottom padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_desk",
+        "label": "Dektop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 100,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_lap",
+        "label": "Laptop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 80,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_tab",
+        "label": "Tablet",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 60,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_mob",
+        "label": "Mobile",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 40,
+				"info": "Padding"
+      }
+		],
+		"blocks": [
+			{
+				"name": "Text Content",
+				"type": "text",
+				"settings": [
+					{
+						"type": "color_scheme",
+						"id": "block_colors",
+						"label": "Block Color Scheme",
+						"default": "scheme-1"
+					},
+					{
+						"type": "text_alignment",
+						"id": "text_alignment",
+						"label": "Text Alignment",
+						"default": "center"
+					},
+					{
+						"type": "inline_richtext",
+						"id": "title",
+						"label": "Title",
+						"default": "Title goes here"
+					},
+					{
+						"type": "select",
+						"id": "title_size",
+						"label": "Heading Size",
+						"options": [
+							{
+								"value": "ts-text-size_lg",
+								"label": "Large"
+							},
+							{
+								"value": "ts-text-size_md",
+								"label": "Medium"
+							},
+							{
+								"value": "ts-text-size_sm",
+								"label": "Small"
+							}
+						],
+						"default": "ts-text-size_lg"
+					},
+					{
+						"type": "richtext",
+						"id": "content",
+						"label": "Content",
+						"default": "<p>Content goes here</p>"
+					},
+					{
+						"type": "select",
+						"id": "txt_size",
+						"label": "Body Text Size",
+						"options": [
+							{
+								"value": "ts-text-size_lg",
+								"label": "Large"
+							},
+							{
+								"value": "ts-text-size_md",
+								"label": "Medium"
+							},
+							{
+								"value": "ts-text-size_sm",
+								"label": "Small"
+							}
+						],
+						"default": "ts-text-size_sm"
+					}
+				]
 			},
 			{
+				"name": "Image",
 				"type": "image_picker",
-				"id": "image",
-				"label": "Image"
-			},
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "image", 
+						"label": "Image"
+					}
+				]	
+			}
+		],
+		"presets": [
 			{
-				"type": "select",
-				"id": "image_position",
-				"label": "Image Position",
-				"options": [
-					{ "value": "left", "label": "Left" },
-					{ "value": "right", "label": "Right" }
-				],
-				"default": "left"
+				"name": "Image Text Grid Blocks",
+				"category": "Image",
+				"blocks": [
+					{ "type": "text" },
+					{ "type": "image_picker" },
+					{ "type": "text" },
+					{ "type": "image_picker" }
+				]
 			}
 		]
 	}

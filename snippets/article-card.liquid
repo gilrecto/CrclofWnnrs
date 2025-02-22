@@ -73,9 +73,9 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
-          <div class="card__information">
-            <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+        <div class="card__content !ts-px-0 !ts-pt-5">
+          <div class="card__information !ts-p-0">
+            <h3 class="card__heading{% if show_excerpt %} h2{% endif %} !ts-font-bold">
               <a href="{{ article.url }}" class="full-unstyled-link">
                 {{ article.title | truncate: 50 | escape }}
               </a>
@@ -112,9 +112,9 @@
           {%- endif -%}
         </div>
       </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+      <div class="card__content !ts-px-0 !ts-pt-5">
+        <div class="card__information !ts-p-0">
+          <h3 class="card__heading{% if show_excerpt %} h2{% endif %} !ts-font-bold">
             <a href="{{ article.url }}" class="full-unstyled-link">
               {{ article.title | truncate: 50 | escape }}
             </a>

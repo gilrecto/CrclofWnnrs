@@ -1,6 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template">
+<article class="article-template ts-pt-12 lg:ts-pb-40 ts-pb-24">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -9,10 +9,7 @@
         </div>
       {%- when 'featured_image' -%}
         {%- if article.image -%}
-          <div
-            class="article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-            {{ block.shopify_attributes }}
-          >
+          <div class="article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} {% if block.settings.show_meta %} ts-grid lg:ts-grid-cols-2 ts-grid-cols-1{% endif %}" {{ block.shopify_attributes }}>
             <div
               class="article-template__hero-{{ block.settings.image_height }} media"
               {% if block.settings.image_height == 'adapt' and article.image %}
@@ -38,12 +35,27 @@
                 alt="{{ article.image.alt | escape }}"
               >
             </div>
+
+            {%- if block.settings.show_meta -%}
+              <div class="article-template-meta color-{{ block.settings.color_scheme }} lg:ts-px-[4.948vw] ts-px-10 ts-py-12 ts-flex ts-items-center ts-w-full">
+                <div class="article-template-meta__content">
+                  <h1 class="article-template__title ts-text-clamp_l ts-font-vincent ts-leading-[1.15] lg:!ts-mb-14 !ts-mb-10">
+                    {{ article.title | escape }}
+                  </h1>
+                  {%- if article.excerpt != blank -%}
+                    <div class="rte article-template__excerpt ts-text-size_sm ts-leading-[1.65] ts-uppercase">
+                      {{ article.excerpt }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
 
       {%- when 'title' -%}
         <header
-          class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="article-template__content{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           <h1
@@ -65,7 +77,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} ts-text-size_sm ts-leading-[2]"
           {{ block.shopify_attributes }}
         >
           {{ article.content }}
@@ -73,7 +85,7 @@
 
       {%- when 'share' -%}
         <div
-          class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {% assign share_url = request.origin | append: article.url %}
@@ -82,10 +94,10 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="article-template__content article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} !ts-mb-0">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
       <span class="icon-wrap">
-        <span class="svg-wrapper">
+        <span class="svg-wrapper ts-w-6 ts-h-6">
           {{- 'icon-arrow.svg' | inline_asset_content -}}
         </span>
       </span>
@@ -330,6 +342,18 @@
           "default": "adapt",
           "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
           "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_meta",
+          "default": true,
+          "label": "Show Title and Excerpt"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Meta Box Colors",
+          "default": "scheme-1"
         }
       ]
     },

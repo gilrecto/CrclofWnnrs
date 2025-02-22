@@ -8,9 +8,11 @@
   }
 }
 
-.article-template__hero-container {
-  max-width: 130rem;
+.article-template__hero-container,
+.article-template__content {
+  max-width: 156rem;
   margin: 0 auto;
+  padding: 0 1.75rem;
 }
 
 .article-template__hero-small {
@@ -74,11 +76,11 @@
 }
 
 .article-template__link {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .article-template__link .icon-wrap {
@@ -88,8 +90,8 @@
 }
 
 .article-template__content {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .article-template__social-sharing {
@@ -171,5 +173,5 @@
 }
 
 .article-template__back:last-child {
-  margin-bottom: 3.2rem;
+  margin-top: 5rem;
 }

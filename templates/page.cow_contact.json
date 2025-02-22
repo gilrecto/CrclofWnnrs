@@ -5,38 +5,122 @@
       "blocks": {
         "faq_Wp3N7J": {
           "type": "faq",
+          "source": "{{ metaobjects.faqs[\"i-just-placed-an-order-can-i-cancel-it\"] }}",
           "settings": {
-            "question": "Question goes here",
-            "answer": "<p>Answer goes here<\/p>"
+            "question": "{{ metaobjects.faqs[\"i-just-placed-an-order-can-i-cancel-it\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"i-just-placed-an-order-can-i-cancel-it\"].answer | metafield_tag }}"
           }
         },
         "faq_yRqRaj": {
           "type": "faq",
+          "source": "{{ metaobjects.faqs[\"i-only-received-one-of-the-items-in-my-order-where-is-the-rest\"] }}",
           "settings": {
-            "question": "Question goes here",
-            "answer": "<p>Answer goes here<\/p>"
+            "question": "{{ metaobjects.faqs[\"i-only-received-one-of-the-items-in-my-order-where-is-the-rest\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"i-only-received-one-of-the-items-in-my-order-where-is-the-rest\"].answer | metafield_tag }}"
           }
         },
         "faq_6JRULg": {
           "type": "faq",
+          "source": "{{ metaobjects.faqs[\"can-i-change-my-ship-to-address-after-my-order-has-been-placed\"] }}",
           "settings": {
-            "question": "Question goes here",
-            "answer": "<p>Answer goes here<\/p>"
+            "question": "{{ metaobjects.faqs[\"can-i-change-my-ship-to-address-after-my-order-has-been-placed\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"can-i-change-my-ship-to-address-after-my-order-has-been-placed\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_LNF38x": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"can-i-change-my-order-after-it-has-been-placed\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"can-i-change-my-order-after-it-has-been-placed\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"can-i-change-my-order-after-it-has-been-placed\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_LNkCMG": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"how-much-will-it-cost-to-ship-my-order\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"how-much-will-it-cost-to-ship-my-order\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"how-much-will-it-cost-to-ship-my-order\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_dyyNCd": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"what-shipping-carrier-do-you-use-to-delivery-orders\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"what-shipping-carrier-do-you-use-to-delivery-orders\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"what-shipping-carrier-do-you-use-to-delivery-orders\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_83ATA6": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"will-you-provide-tracking\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"will-you-provide-tracking\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"will-you-provide-tracking\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_pYypEf": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"tracking-is-telling-me-my-label-has-been-created-but-its-not-updating-where-it-is-why-is-this\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"tracking-is-telling-me-my-label-has-been-created-but-its-not-updating-where-it-is-why-is-this\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"tracking-is-telling-me-my-label-has-been-created-but-its-not-updating-where-it-is-why-is-this\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_tRadgn": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"how-long-will-it-take-to-receive-my-order\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"how-long-will-it-take-to-receive-my-order\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"how-long-will-it-take-to-receive-my-order\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_KE4AJG": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"what-is-your-return-policy\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"what-is-your-return-policy\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"what-is-your-return-policy\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_hxQgPB": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"how-do-i-exchange-or-return-an-item-s\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"how-do-i-exchange-or-return-an-item-s\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"how-do-i-exchange-or-return-an-item-s\"].answer | metafield_tag }}"
+          }
+        },
+        "faq_ddRmzY": {
+          "type": "faq",
+          "source": "{{ metaobjects.faqs[\"what-is-the-size-scale-for-your-products\"] }}",
+          "settings": {
+            "question": "{{ metaobjects.faqs[\"what-is-the-size-scale-for-your-products\"].question.value }}",
+            "answer": "{{ metaobjects.faqs[\"what-is-the-size-scale-for-your-products\"].answer | metafield_tag }}"
           }
         }
       },
       "block_order": [
         "faq_Wp3N7J",
         "faq_yRqRaj",
-        "faq_6JRULg"
+        "faq_6JRULg",
+        "faq_LNF38x",
+        "faq_LNkCMG",
+        "faq_dyyNCd",
+        "faq_83ATA6",
+        "faq_pYypEf",
+        "faq_tRadgn",
+        "faq_KE4AJG",
+        "faq_hxQgPB",
+        "faq_ddRmzY"
       ],
       "custom_css": [
         ".rte strong {text-transform: uppercase;}"
       ],
       "settings": {
-        "section_colors": "",
+        "section_colors": "scheme-1",
         "title": "Contact Us",
-        "contact_body": "<p><strong>Press<br\/><\/strong>For all press inquiries, please contact: <a href=\"mailto:press@crclofwnnrs.com\" title=\"mailto:press@crclofwnnrs.com\">press@crclofwnnrs.com<\/a><\/p><p><strong>Wholesale<\/strong><br\/>For all wholesale inquiries, please contact: wholesale@crclofwnnrs.com<\/p><p><strong>For customer inquiries<br\/><\/strong>Please fill out the inquiry box below.\u2028Our customer service is available during the following hours [10 am-6 pm, Monday-Friday]. Please expect a response within [24hr-48hr]. For all tracking inquiries, please combine your questions into one message.<\/p><p><strong>Product care<br\/><\/strong>For fabric care instructions, please refer to the specific fabric page on our website. We provide care instructions based on each fabric to ensure the longevity and quality of our products. Please note that these care instructions are for insurance purposes and to inform our customers.<\/p>",
+        "contact_body": "<p><strong>Press<br\/><\/strong>For all press inquiries, please contact: <a href=\"mailto:press@crclofwnnrs.com\" title=\"Email press@crclofwnnrs.com\">press@crclofwnnrs.com<\/a><\/p><p><strong>Wholesale<\/strong><br\/>For all wholesale inquiries, please contact: <a href=\"mailto:wholesale@crclofwnnrs.com\" title=\"Email wholesale@crclofwnnrs.com\">wholesale@crclofwnnrs.com<\/a><\/p><p><strong>For customer inquiries<br\/><\/strong>Please fill out the inquiry box.\u2028Our customer service is available during the following hours [10 am-6 pm, Monday-Friday]. Please expect a response within [24hr-48hr]. For all tracking inquiries, please combine your questions into one message.<\/p><p><strong>Product care<br\/><\/strong>For fabric care instructions, please refer to the specific fabric page on our website. We provide care instructions based on each fabric to ensure the longevity and quality of our products. Please note that these care instructions are for insurance purposes and to inform our customers.<\/p>",
         "form_title": "Submit an Inquiry",
         "faq_enable": true,
         "faq_title": "Frequently Asked Questions",

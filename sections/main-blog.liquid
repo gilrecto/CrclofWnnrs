@@ -16,13 +16,13 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+{%- paginate blog.articles by 100 -%}
+  <div class="main-blog page-width section-{{ section.id }}-padding md:!ts-px-12">
+    <h1 class="title--primary ts-sr-only{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ blog.title | escape }}
     </h1>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} xl:!ts-grid-cols-4 md:!ts-grid-cols-2 !ts-grid-cols-1">
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -38,7 +38,7 @@
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
-            show_excerpt: true
+            show_excerpt: section.settings.show_excerpt
           -%}
         </div>
       {%- endfor -%}
@@ -107,6 +107,12 @@
       "default": "medium",
       "label": "t:sections.main-blog.settings.image_height.label",
       "info": "t:sections.main-blog.settings.image_height.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": true,
+      "label": "Show Excerpt"
     },
     {
       "type": "checkbox",

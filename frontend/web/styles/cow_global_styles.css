@@ -16,11 +16,20 @@ iframe#preview-bar-iframe {
 .text-align {
   text-align: var(--text-align);
 }
+.btn {
+	@apply ts-block ts-w-full ts-text-center ts-bg-[rgba(var(--color-foreground))] ts-text-[rgba(var(--color-background))] ts-p-4
+}
 .btn-text-only {
-	@apply ts-text-size_sm ts-uppercase ts-font-normal hover:ts-font-bold hover:ts-underline ts-transition-all ts-duration-300 ts-ease-linear;
+	@apply ts-text-size_sm ts-uppercase ts-font-normal ts-inline ts-p-0 ts-bg-transparent ts-text-[rgba(var(--color-foreground))] hover:ts-font-bold hover:ts-underline ts-transition-all ts-duration-300 ts-ease-linear;
 }
 a, button, .btn, input[type="submit"] {
 	@apply ts-transition-all ts-duration-300 ts-ease-linear hover:!ts-text-accent;
+}
+.rte ul, .rte ol {
+	list-style: auto;
+}
+table:not([class]) {
+	@apply ts-text-size_sm ts-shadow-none ts-border ts-border-solid ts-border-[rgba(var(--color-foreground))];
 }
 .custom-section {
 	@apply xl:ts-py-[var(--padding-xl)] lg:ts-py-[var(--padding-lg)] md:ts-py-[var(--padding-md)] ts-py-[var(--padding-sm)] ts-px-0 ts-overflow-hidden;
@@ -129,6 +138,20 @@ swiper-slider .instagram-posts-swiper .img-wrapper.media {
 }
 .image-text-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	@apply ts-opacity-100;
+}
+.main-contact form .field__input {
+	@apply ts-px-6 ts-py-[0.7rem] ts-h-auto ts-border ts-border-[#ABABAB] hover:ts-border-accent focus:ts-border-accent ts-border-solid !ts-outline-none !ts-shadow-none;
+}
+.main-contact form .contact__button button {
+	@apply ts-uppercase ts-font-bold ts-rounded-full ts-bg-accent hover:!ts-bg-black hover:!ts-text-white;
+}
+.product__accordion details summary,
+.product__accordion details .accordion__content {
+	@apply ts-transition-all ts-ease-linear ts-duration-300
+}
+.product__accordion details:not([open]) summary,
+.product__accordion details:not([open]) .accordion__content {
+	@apply ts-opacity-50
 }
 
 @media only screen and (max-width: 991px) {

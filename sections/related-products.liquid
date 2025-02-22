@@ -7,6 +7,9 @@
 {%- endif -%}
 
 {%- style -%}
+  #shopify-section-{{ section.id }} {
+		--text-align: {{ setting.text_alignment | default: 'center' }};
+	}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -28,7 +31,7 @@
     data-product-id="{{ product.id }}"
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }} ts-font-bold ts-uppercase md:!ts-mb-24">
         {{ section.settings.heading }}
       </h2>
       <ul
@@ -77,30 +80,34 @@
     {
       "type": "select",
       "id": "heading_size",
+      "label": "Heading Size",
       "options": [
         {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
+          "value": "ts-text-clamp_xxl",
+          "label": "2X Large"
         },
         {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
+          "value": "ts-text-clamp_xl",
+          "label": "Extra Large"
         },
         {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
+          "value": "ts-text-clamp_l",
+          "label": "Large"
         },
         {
-          "value": "hxl",
-          "label": "t:sections.all.heading_size.options__4.label"
+          "value": "ts-text-size_lg",
+          "label": "Medium"
         },
         {
-          "value": "hxxl",
-          "label": "t:sections.all.heading_size.options__5.label"
+          "value": "ts-text-size_md",
+          "label": "Small"
+        },
+        {
+          "value": "ts-text-size_sm",
+          "label": "Extra Small"
         }
       ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "default": "ts-text-clamp_l"
     },
     {
       "type": "range",
@@ -130,6 +137,12 @@
     {
       "type": "header",
       "content": "t:sections.related-products.settings.header__2.content"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Product Card Text Alignment",
+      "default": "center"
     },
     {
       "type": "select",

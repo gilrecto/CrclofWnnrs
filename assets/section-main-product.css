@@ -133,11 +133,11 @@ product-info {
 
 .shopify-payment-button__more-options {
   margin: 1.6rem 0 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.05rem;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .shopify-payment-button__button + .shopify-payment-button__button--hidden {
@@ -1491,4 +1491,10 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+shopify-accelerated-checkout {
+	--shopify-accelerated-checkout-button-border-radius: 6rem;
+  font-size: 1.3rem;
+  font-weight: 700;
 }

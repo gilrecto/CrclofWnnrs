@@ -17,7 +17,7 @@ iframe#preview-bar-iframe {
   text-align: var(--text-align);
 }
 .btn {
-	@apply ts-block ts-w-full ts-text-center ts-bg-[rgba(var(--color-foreground))] ts-text-[rgba(var(--color-background))] ts-p-4
+	@apply ts-block ts-w-full ts-text-center ts-bg-[rgba(var(--color-foreground))] ts-text-[rgba(var(--color-background))] ts-p-4;
 }
 .btn-text-only {
 	@apply ts-text-size_sm ts-uppercase ts-font-normal ts-inline ts-p-0 ts-bg-transparent ts-text-[rgba(var(--color-foreground))] hover:ts-font-bold hover:ts-underline ts-transition-all ts-duration-300 ts-ease-linear;

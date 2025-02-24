@@ -102,7 +102,7 @@ footer .footer-block--newsletter .footer-block__newsletter {
 	@apply ts-text-left lg:ts-ml-[5vw];
 }
 footer .footer-block--newsletter .footer__newsletter .field__input {
-	@apply ts-py-5 ts-px-0 ts-border-b ts-border-b-[rgba(var(--color-foreground))] hover:ts-border-b-accent focus:ts-border-b-accent ts-border-solid !ts-outline-none !ts-shadow-none;
+	@apply ts-py-5 ts-px-0 ts-border-b ts-border-b-[rgba(var(--color-foreground))] ts-rounded-none hover:ts-border-b-accent focus:ts-border-b-accent ts-border-solid !ts-outline-none !ts-shadow-none;
 	@apply placeholder:ts-opacity-100 placeholder:ts-text-[rgba(var(--color-foreground))] placeholder:ts-uppercase;
 }
 footer .footer-block--newsletter .footer__newsletter .newsletter-form__button {
@@ -152,6 +152,15 @@ swiper-slider .instagram-posts-swiper .img-wrapper.media {
 .product__accordion details:not([open]) summary,
 .product__accordion details:not([open]) .accordion__content {
 	@apply ts-opacity-50
+}
+.product__accordion summary .icon-caret {
+	@apply ts-hidden;
+}
+.product__accordion summary:after {
+	@apply ts-content-["+"] ts-text-[2.2rem] ts-leading-none ts-font-medium;
+}
+.product__accordion details[open] summary:after {
+	@apply ts-content-["-"];
 }
 
 @media only screen and (max-width: 991px) {

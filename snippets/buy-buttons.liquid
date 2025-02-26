@@ -70,13 +70,13 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <div class="product-form--actions ts-grid ts-gap-x-6 ts-grid-cols-8">
+          <div class="product-form--actions ts-grid ts-gap-x-6 ts-grid-cols-10">
             {% render 'cow_quantity_selector', product: product %}
             <button
               id="ProductSubmitButton-{{ section_id }}"
               type="submit"
               name="add"
-              class="product-form__submit btn button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %} ts-col-span-6 ts-text-size_sm ts-uppercase ts-min-h-16 ts-self-end ts-rounded-full ts-bg-accent hover:ts-text-white"
+              class="product-form__submit btn button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %} ts-col-span-7 ts-text-size_sm ts-uppercase ts-min-h-16 ts-self-end ts-rounded-full ts-bg-accent hover:ts-text-white"
               {% if product.selected_or_first_available_variant.available == false
                 or quantity_rule_soldout
                 or product.selected_or_first_available_variant == null

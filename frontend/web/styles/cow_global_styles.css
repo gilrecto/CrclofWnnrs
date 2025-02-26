@@ -35,7 +35,8 @@ table:not([class]) {
 	@apply xl:ts-py-[var(--padding-xl)] lg:ts-py-[var(--padding-lg)] md:ts-py-[var(--padding-md)] ts-py-[var(--padding-sm)] ts-px-0 ts-overflow-hidden;
 }
 swiper-slider .bordered-card .swiper-slide .card-wrapper .card__inner,
-.collection .card-wrapper .card__inner {
+.collection .card-wrapper .card__inner,
+.product-grid .card-wrapper .card__inner {
 	border: 1px solid rgba(var(--color-secondary-button-text));
 }
 swiper-slider .bordered-card .swiper-slide .card-wrapper .card__information,
@@ -161,6 +162,22 @@ swiper-slider .instagram-posts-swiper .img-wrapper.media {
 }
 .product__accordion details[open] summary:after {
 	@apply ts-content-["-"];
+}
+.product-form__input--pill input[type=radio] + label {
+	@apply !ts-text-size_sm !ts-py-5;
+}
+.product-form__input--pill input[type=radio].disabled + label {
+	@apply !ts-border-[rgba(var(--color-foreground))] !ts-bg-[#f5f5f5] !ts-no-underline ts-cursor-not-allowed;
+}
+.product-form__input--pill input[type=radio].disabled + label:after {
+	@apply ts-content-[""] ts-w-full ts-h-full ts-absolute ts-top-0 ts-left-0;
+	background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(var(--color-foreground)), transparent calc(50% + 1px));
+}
+.product__media-list {
+	@apply ts-gap-4 !ts-pr-0;
+}
+.product-media-container .media {
+	@apply !ts-pt-0 ts-aspect-[3/4];
 }
 
 @media only screen and (max-width: 991px) {

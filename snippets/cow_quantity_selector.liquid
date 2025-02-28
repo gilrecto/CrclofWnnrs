@@ -1,6 +1,6 @@
 <div
 	id="Quantity-Form-{{ section.id }}"
-	class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} ts-col-span-3"
+	class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} md:ts-col-span-3 ts-col-span-4"
 	{{ block.shopify_attributes }}
 >
 	{% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
@@ -22,7 +22,7 @@
 	</label>
 	<div class="price-per-item__container">
 		<quantity-input class="quantity ts-w-auto ts-min-h-16" data-url="{{ product.url }}" data-section="{{ section.id }}">
-			<button class="quantity__button ts-w-auto ts-py-4 ts-px-7" name="minus" type="button">
+			<button class="quantity__button ts-w-auto ts-py-4 ts-px-6" name="minus" type="button">
 				<span class="visually-hidden">
 					{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
 				</span>
@@ -46,7 +46,7 @@
 				value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
 				form="{{ product_form_id }}"
 			>
-			<button class="quantity__button ts-w-auto ts-py-4 ts-px-7" name="plus" type="button">
+			<button class="quantity__button ts-w-auto ts-py-4 ts-px-6" name="plus" type="button">
 				<span class="visually-hidden">
 					{{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
 				</span>

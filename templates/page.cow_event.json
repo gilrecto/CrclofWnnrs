@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "main": {
+      "type": "cow_main_event",
+      "settings": {
+        "section_colors": "",
+        "title": "Lookbooks",
+        "title_size": "ts-text-size_md",
+        "text_alignment": "left",
+        "card_colors": "scheme-4",
+        "pad_desk": 70,
+        "pad_lap": 70,
+        "pad_tab": 60,
+        "pad_mob": 40
+      }
+    },
+    "rich_text_Xh7eFV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p4g7iA": {
+          "type": "heading",
+          "settings": {
+            "heading": "REMIND YOURSELF. NOBODY BUILT LIKE YOU, YOU DESIGN YOURSELF.",
+            "heading_size": "ts-text-clamp_l"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p4g7iA"
+      ],
+      "custom_css": [
+        "h2.rich-text__heading.rte {font-family: \"Vincent\", \"sans-serif\";}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "content_width": 120,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_Xh7eFV"
+  ]
+}

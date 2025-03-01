@@ -125,25 +125,25 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
-    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %} mobile:!ts-flex ts-items-center mobile:ts-absolute sm-mobile:!ts-bottom-[-6.6rem] mobile:ts-bottom-[-8.6rem] ts-right-0">
+    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %} mobile:!ts-flex ts-items-center mobile:ts-absolute sm-mobile:!ts-bottom-[-5rem] mobile:ts-bottom-[-7rem] ts-right-0">
       <button
         type="button"
-        class="slider-button slider-button--prev mobile:!ts-block"
+        class="slider-button slider-button--prev mobile:!ts-block !ts-w-8 !ts-h-8 ts-mr-6"
         name="previous"
         aria-label="{{ 'general.slider.previous_slide' | t }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+        <span class="svg-wrapper *:!ts-w-8 *:!ts-h-8 *:!ts-rotate-180">
+          {{- 'icon-swiper-arrow.svg' | inline_asset_content -}}
         </span>
       </button>
       <button
         type="button"
-        class="slider-button slider-button--next mobile:!ts-block"
+        class="slider-button slider-button--next mobile:!ts-block !ts-w-8 !ts-h-8"
         name="next"
         aria-label="{{ 'general.slider.next_slide' | t }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+        <span class="svg-wrapper *:!ts-w-8 *:!ts-h-8 *:!ts-rotate-0">
+          {{- 'icon-swiper-arrow.svg' | inline_asset_content -}}
         </span>
       </button>
       <div class="slider-counter caption">

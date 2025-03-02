@@ -1,0 +1,163 @@
+{%- assign setting = section.settings -%}
+
+{%- style -%}
+	#shopify-section-{{ section.id }} {
+		--text-align: {{ setting.text_alignment | default: 'center' }};
+		--padding-xl: {{ setting.pad_desk | append: 'px' }};
+		--padding-lg: {{ setting.pad_lap | append: 'px' }};
+		--padding-md: {{ setting.pad_tab | append: 'px' }};
+		--padding-sm: {{ setting.pad_mob | append: 'px' }};
+	}
+{%- endstyle -%}
+<div class="inner-event color-{{ setting.section_colors }} custom-section">
+	<div class="page-width">
+		{%- if setting.title != blank -%}
+			<div class="title-area text-align ts-mb-12">
+				<h2 class="title {{ setting.title_size }} ts-m-0 ts-uppercase ts-font-bold">{{ setting.title }}</h2>
+
+				{%- if setting.show_date and metaobject.date != blank -%}
+					<p class="event-date ts-mt-5 ts-text-size_xs ts-font-bold">
+						{{ metaobject.date | date: '%B %d, %Y' }} at {{ metaobject.date | date: '%I:%M %P' }}
+					</p>
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+
+		{%- if setting.body != blank -%}
+			<div class="event-details rte text-align ts-text-size_sm ts-leading-[1.6] ts-mb-12 ts-max-w-[75rem]{% if setting.text_alignment == 'center' %} ts-mx-auto{% elsif setting.text_alignment == 'right' %} ts-ml-auto{% endif %}">
+				{{ setting.body }}
+			</div>
+		{%- endif -%}
+		
+		{%- assign media_array = metaobject.media.value -%}
+
+		<div class="event-media event-media-wrapper ts-grid md:ts-grid-cols-3 ts-grid-cols-2 ts-gap-4">
+			{%- for media in media_array -%}
+				{%- assign image = media -%}
+				<div class="event-card-media *:ts-aspect-[3/4] ts-border ts-border-solid ts-border-[rgba(var(--color-foreground))]">
+					{% render 'image', image: image, section: section, class: img_class %}
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name": "Inner Event",
+		"class": "cow-inner-event",
+		"tag": "section",
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "section_colors",
+				"label": "t:sections.all.colors.label",
+				"default": "scheme-1"
+			},
+			{
+				"type": "inline_richtext",
+				"id": "title",
+				"default": "Title",
+				"label": "Section Heading"
+			},
+			{
+				"type": "select",
+				"id": "title_size",
+				"label": "Heading Size",
+				"options": [
+					{
+						"value": "ts-text-clamp_xxl",
+						"label": "2X Large"
+					},
+					{
+						"value": "ts-text-clamp_xl",
+						"label": "Extra Large"
+					},
+					{
+						"value": "ts-text-clamp_l",
+						"label": "Large"
+					},
+					{
+						"value": "ts-text-size_lg",
+						"label": "Medium"
+					},
+					{
+						"value": "ts-text-size_md",
+						"label": "Small"
+					},
+					{
+						"value": "ts-text-size_sm",
+						"label": "Extra Small"
+					}
+				],
+				"default": "ts-text-clamp_l"
+			},
+			{
+				"type": "text_alignment",
+				"id": "text_alignment",
+				"label": "Text Alignment",
+				"default": "center"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_date",
+				"label": "Show Event Date",
+				"default": true
+			},
+			{
+				"type": "richtext",
+				"id": "body",
+				"label": "Body Text"
+			},
+			{
+        "type": "header",
+        "content": "Section spacing",
+        "info": "Top and bottom padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_desk",
+        "label": "Dektop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 100,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_lap",
+        "label": "Laptop",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 80,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_tab",
+        "label": "Tablet",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 60,
+				"info": "Padding"
+      },
+      {
+        "type": "range",
+        "id": "pad_mob",
+        "label": "Mobile",
+        "unit": "px",
+        "min": 10,
+        "max": 250,
+        "step": 10,
+        "default": 40,
+				"info": "Padding"
+      }
+		]
+	}
+{% endschema %}

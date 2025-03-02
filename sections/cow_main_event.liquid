@@ -21,7 +21,7 @@
 			{%- assign events = events | sort_natural: 'date' -%}
 
 			{%- for event in events -%}
-				<div class="event-card event-card--{{ event.system.id }} color-{{ setting.card_colors }}">
+				<div class="event-card event-card--{{ event.system.id }} color-{{ setting.card_colors }} ts-border ts-border-solid ts-border-[rgba(var(--color-background))]">
 					<div class="event-card-wrapper ts-relative ts-grid ts-grid-rows-1 ts-grid-cols-1">
 						<a href="{{ event.system.url }}" class="link event-link ts-relative ts-row-span-full ts-col-span-full ts-z-[2] ts-opacity-0" title="{{ event.name }}">
 							{{ event.name }}

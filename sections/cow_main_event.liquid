@@ -13,7 +13,9 @@
 <div class="main-event color-{{ setting.section_colors }} custom-section">
 	<div class="page-width md:!ts-px-12">
 		{%- if setting.title != blank -%}
-			<h2 class="title {{ setting.title_size }} ts-mt-0 ts-mb-5 ts-uppercase ts-font-bold text-align">{{ setting.title }}</h2>
+			<h2 class="title {{ setting.title_size }} ts-mt-0 ts-mb-5 ts-uppercase ts-font-bold text-align{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+				{{ setting.title }}
+			</h2>
 		{%- endif -%}
 
 		<div class="events events-wrapper ts-grid lg:ts-grid-cols-4 md:ts-grid-cols-3 ts-grid-cols-2 ts-gap-x-4 ts-gap-y-8">
@@ -21,7 +23,8 @@
 			{%- assign events = events | sort_natural: 'date' -%}
 
 			{%- for event in events -%}
-				<div class="event-card event-card--{{ event.system.id }} color-{{ setting.card_colors }} ts-border ts-border-solid ts-border-[rgba(var(--color-background))]">
+				<div class="event-card event-card--{{ event.system.id }} color-{{ setting.card_colors }} ts-border ts-border-solid ts-border-[rgba(var(--color-background))] {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+			{% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
 					<div class="event-card-wrapper ts-relative ts-grid ts-grid-rows-1 ts-grid-cols-1">
 						<a href="{{ event.system.url }}" class="link event-link ts-relative ts-row-span-full ts-col-span-full ts-z-[2] ts-opacity-0" title="{{ event.name }}">
 							{{ event.name }}

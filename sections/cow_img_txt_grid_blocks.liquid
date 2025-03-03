@@ -19,8 +19,8 @@
 					{%- assign block_item = block.settings -%}
 
 					{%- if block.type == 'text' -%}
-						<div class="grid-item grid-item--text xl:ts-p-20 md:ts-p-12 ts-p-8 ts-h-full ts-flex ts-items-center color-{{ block_item.block_colors }}" 
-								 style="--text-align: {{ block_item.text_alignment | default: 'center' }};" {{ block.shopify_attributes }}>
+						<div class="grid-item grid-item--text xl:ts-p-20 md:ts-p-12 ts-p-8 ts-h-full ts-flex ts-items-center color-{{ block_item.block_colors }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
+								 style="--text-align: {{ block_item.text_alignment | default: 'center' }};--animation-order: {{ forloop.index }};"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %} {{ block.shopify_attributes }}>
 							<div class="grid-item-content text-align ts-flex-1">
 								{%- if block_item.title != blank -%}
 									<h2 class="block-title {{ block_item.title_size }} ts-uppercase ts-mb-8">
@@ -36,7 +36,8 @@
 							</div>
 						</div>
 					{%- elsif block.type == 'image_picker' -%}
-						<div class="grid-item grid-item--image *:ts-h-full *:ts-w-full" {{ block.shopify_attributes }}>
+						<div class="grid-item grid-item--image *:ts-h-full *:ts-w-full{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+							{% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %} {{ block.shopify_attributes }}>
 							{%- if block_item.image != blank -%}
 								{% render 'image', image: block_item.image, section: section, class: 'grid-item-image' %}
 							{%- else -%}

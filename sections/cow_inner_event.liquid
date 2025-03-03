@@ -12,7 +12,7 @@
 <div class="inner-event color-{{ setting.section_colors }} custom-section">
 	<div class="page-width">
 		{%- if setting.title != blank -%}
-			<div class="title-area text-align ts-mb-12">
+			<div class="title-area text-align ts-mb-12{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
 				<h2 class="title {{ setting.title_size }} ts-m-0 ts-uppercase ts-font-bold">{{ setting.title }}</h2>
 
 				{%- if setting.show_date and metaobject.date != blank -%}
@@ -24,20 +24,52 @@
 		{%- endif -%}
 
 		{%- if setting.body != blank -%}
-			<div class="event-details rte text-align ts-text-size_sm ts-leading-[1.6] ts-mb-12 ts-max-w-[75rem]{% if setting.text_alignment == 'center' %} ts-mx-auto{% elsif setting.text_alignment == 'right' %} ts-ml-auto{% endif %}">
+			<div class="event-details rte text-align ts-text-size_sm ts-leading-[1.6] ts-mb-12 ts-max-w-[75rem]{% if setting.text_alignment == 'center' %} ts-mx-auto{% elsif setting.text_alignment == 'right' %} ts-ml-auto{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
 				{{ setting.body }}
 			</div>
 		{%- endif -%}
 		
-		{%- assign media_array = metaobject.media.value -%}
-
 		<div class="event-media event-media-wrapper ts-grid md:ts-grid-cols-3 ts-grid-cols-2 ts-gap-4">
+			{%- assign media_array = metaobject.media.value -%}
+
 			{%- for media in media_array -%}
 				{%- assign image = media -%}
-				<div class="event-card-media *:ts-aspect-[3/4] ts-border ts-border-solid ts-border-[rgba(var(--color-foreground))]">
+				<div class="event-card-media *:ts-aspect-[3/4] ts-border ts-border-solid ts-border-[rgba(var(--color-foreground))]{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
 					{% render 'image', image: image, section: section, class: img_class %}
 				</div>
 			{%- endfor -%}
+		</div>
+
+		{%- assign all_entries = shop.metaobjects.event.values -%}
+		{%- assign all_entries = all_entries | sort_natural: 'date' -%}
+		{%- assign current_entry = metaobject -%}
+		{%- assign next_entry = null -%}
+		{%- assign previous_entry = null -%}
+		{%- assign found_current = false -%}
+		{%- assign previous_entry_url = current_entry.system.url | remove: current_entry.system.handle -%}
+
+		{%- for entry in all_entries -%}
+			{%- if entry.system.id == current_entry.system.id -%}
+				{%- assign found_current = true -%}
+			{%- elsif found_current and next_entry == null -%}
+				{%- assign next_entry = entry -%}
+			{%- endif -%}
+
+			{%- if found_current == false -%}
+				{%- assign previous_entry = entry -%}
+			{%- endif -%}
+		{%- endfor -%}
+
+		<div class="navigation-buttons md:ts-mt-16 ts-mt-10 ts-flex ts-items-center ts-justify-center md:ts-gap-x-16 ts-gap-x-10{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+			{%- if previous_entry -%}
+				{%- assign previous_entry_url = previous_entry.system.url -%}
+			{%- endif -%}
+
+			<a href="{{ previous_entry_url }}" class="back-button ts-w-auto md:ts-text-size_md ts-text-size_sm !ts-font-normal btn btn-text-only">Back</a>
+
+			{%- if next_entry -%}
+				<a href="{{ next_entry.system.url }}" class="next-button ts-w-auto md:ts-text-size_md ts-text-size_sm ts-font-bold btn btn-text-only">Next</a>
+			{%- endif -%}
 		</div>
 	</div>
 </div>

@@ -14,7 +14,7 @@
 
 <div class="image-text-slider ts-pt-[var(--pt)]">
 	<div class="page-width md:!ts-px-12">
-		<div class="img-txt-slider-wrapper ts-grid ts-grid-cols-1{% if section.blocks.size > 0 %} lg:ts-grid-cols-2{% endif %}">
+		<div class="img-txt-slider-wrapper ts-grid ts-grid-cols-1{% if section.blocks.size > 0 %} lg:ts-grid-cols-2{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
 			<div class="img-colmn{% if setting.image_position == 'right' %} lg:ts-order-2{% endif %} *:ts-h-full *:ts-w-full">
 				{%- if setting.image != blank -%}
 					{% render 'image', image: setting.image, section: section, class: 'slider-img' %}

@@ -20,7 +20,7 @@
 
 					{%- if block.type == 'text' -%}
 						<div class="grid-item grid-item--text xl:ts-p-20 md:ts-p-12 ts-p-8 ts-h-full ts-flex ts-items-center color-{{ block_item.block_colors }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" 
-								 style="--text-align: {{ block_item.text_alignment | default: 'center' }};--animation-order: {{ forloop.index }};"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %} {{ block.shopify_attributes }}>
+								 style="--text-align: {{ block_item.text_alignment | default: 'center' }}; --animation-order: {{ forloop.index }};"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %} {{ block.shopify_attributes }}>
 							<div class="grid-item-content text-align ts-flex-1">
 								{%- if block_item.title != blank -%}
 									<h2 class="block-title {{ block_item.title_size }} ts-uppercase ts-mb-8">

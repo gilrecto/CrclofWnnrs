@@ -37,14 +37,14 @@
           {%- if section.blocks.first.settings.link != blank -%}
             <a
               href="{{ section.blocks.first.settings.link }}"
-              class="announcement-bar__link link link--text focus-inset animate-arrow"
+              class="announcement-bar__link link link--text focus-inset animate-arrow hover:!ts-text-[rgb(var(--color-foreground))]"
             >
           {%- endif -%}
           <p class="announcement-bar__message ts-uppercase ts-text-size_xs">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
+            {% comment %} {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
           </p>
           {%- if section.blocks.first.settings.link != blank -%}
             </a>

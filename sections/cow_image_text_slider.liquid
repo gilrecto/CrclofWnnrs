@@ -33,7 +33,7 @@
 								{%- for block in section.blocks -%}
 									{%- if block.settings.content != blank -%}
 										<div class="swiper-slide ts-select-none" {{ block.shopify_attributes }}>
-											<div class="rte block-content ts-font-vincent ts-text-clamp_l ts-leading-[1.15] mobile:ts-text-[2.2rem]">
+											<div class="rte block-content ts-text-clamp_l ts-leading-[1.2] mobile:ts-text-[2.2rem]">
 												{{ block.settings.content }}
 											</div>
 										</div>
@@ -70,8 +70,8 @@
 					576: { slidesPerView:1, spaceBetween: 10 },
 					768: { slidesPerView: 1, spaceBetween: 10 },
 					992: { slidesPerView: 1, spaceBetween: 10, autoHeight: false },
-					1200: { slidesPerView: 1, spaceBetween: 10 },
-					1441: { slidesPerView: 1, spaceBetween: 10 },
+					1200: { slidesPerView: 1, spaceBetween: 10, autoHeight: false },
+					1441: { slidesPerView: 1, spaceBetween: 10, autoHeight: false },
 				},
 				pagination: {
 					el: ".bullets--{{ section.id }}",

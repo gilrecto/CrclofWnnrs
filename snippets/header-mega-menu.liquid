@@ -4,6 +4,7 @@
   Usage:
   {% render 'header-mega-menu' %}
 {% endcomment %}
+{%- assign menu_collections = shop.metaobjects.mega_menu_collection.values -%}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
@@ -27,11 +28,11 @@
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup{% if menu_collections != blank %} ts-flex ts-items-start ts-gap-x-20{% endif %}"
                 tabindex="-1"
               >
                 <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %} md:!ts-px-12"
                   role="list"
                 >
                   {%- for childlink in link.links -%}
@@ -67,6 +68,32 @@
                     </li>
                   {%- endfor -%}
                 </ul>
+                {%- if menu_collections != blank -%}
+                  <div class="mega-menu-collections ts-grid ts-grid-cols-5 ts-gap-x-8 ts-flex-1">
+                    {%- for menu_collection in menu_collections limit: 5 -%}
+                      {%- assign collection = menu_collection.collection.value -%}
+                      {%- assign title = collection.title -%}
+                      {%- assign image = collection.featured_image -%}
+
+                      {%- if menu_collection.title != blank -%}
+                        {%- assign title = menu_collection.title -%}
+                      {%- endif -%}
+
+                      {%- if menu_collection.image != blank -%}
+                        {%- assign image = menu_collection.image.value -%}
+                      {%- endif -%}
+
+                      <a href="{{ collection.url }}" class="mega-menu__collection link ts-no-underline" title="{{ title }}">
+                        <div class="mega-menu__collection-image ts-mb-4 *:!ts-aspect-square">
+                          {% render 'image', image: image, section: section, class: 'collection-image' %}
+                        </div>
+                        <div class="mega-menu__collection-title ts-text-[1rem] ts-font-bold ts-uppercase">
+                          {{ title }}
+                        </div>
+                      </a>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
               </div>
             </details>
           </header-menu>

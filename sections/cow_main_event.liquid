@@ -29,8 +29,8 @@
 						<a href="{{ event.system.url }}" class="link event-link ts-relative ts-row-span-full ts-col-span-full ts-z-[2] ts-opacity-0" title="{{ event.name }}">
 							{{ event.name }}
 						</a>
-						<div class="event-card-media ts-row-span-full ts-col-span-full *:ts-aspect-[3/4]">
-							{% render 'image', image: event.featured_image, section: section, class: 'event-ft-image' %}
+						<div class="event-card-media ts-row-span-full ts-col-span-full *:!ts-aspect-[3/4]">
+							{% render 'image', image: event.featured_image.value, section: section, class: 'event-ft-image' %}
 						</div>
 						<div class="event-card-name ts-row-span-full ts-col-span-full ts-relative ts-z-[1] ts-flex ts-items-end ts-p-4">
 							<p class="event-name ts-uppercase ts-text-size_sm ts-underline ts-underline-offset-4">
@@ -41,7 +41,7 @@
 				</div>
 			{%- endfor -%}
 		</div>
-	</div> 
+	</div>
 </div>
 
 {% schema %}

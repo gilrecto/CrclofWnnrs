@@ -13,7 +13,7 @@
 	endif
 %}
 
-<div class="img-wrapper media"{% if image != blank %} style="aspect-ratio: {{ image.aspect_ratio }};"{% endif %}>
+<div class="img-wrapper media" style="aspect-ratio: {{ image.aspect_ratio }};">
 	{%- if image != blank -%}
 		{{
 			image | image_url: width: image.width | image_tag:

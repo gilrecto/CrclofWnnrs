@@ -5,6 +5,7 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 {%- assign menu_collections = shop.metaobjects.mega_menu_collection.values -%}
+{%- assign menu_collections = menu_collections | sort_natural: 'title' | reverse -%}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">

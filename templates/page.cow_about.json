@@ -6,19 +6,19 @@
         "text_a9xTAw": {
           "type": "text",
           "settings": {
-            "content": "<p>A circle is more than just a shape—it's a symbol of unity, infinite, wholeness, and<br\/>connection.It holds despite outside pressure, just like us. We come from different backgrounds, experiences, and<br\/>paths, but we are bound by a common purpose—driven by the values that define<br\/>who we are.<\/p>"
+            "content": "<p>A circle is more than just a shape - it's a symbol of unity, infinite, wholeness, and connection. It holds despite outside pressure, just like us. We come from different backgrounds, experiences, and paths, but we are bound by a common purpose - driven by the values that define<br\/>who we are.<\/p>"
           }
         },
         "text_9hcc4m": {
           "type": "text",
           "settings": {
-            "content": "<p>Crcl Of Wnnrs is more than a mindset; it’s a way of life. A code. It’s the relentless pursuit of growth, the commitment to those who stand beside us—We hold our people down, because they hold us down. It’s built on inspiration, trust, respect, and love.<\/p>"
+            "content": "<p>Crcl Of Wnnrs is more than a mindset; it’s a way of life. A code. It’s the relentless pursuit of growth, the commitment to those who stand beside us - We hold our people down, because they hold us down. It’s built on inspiration, trust, respect, and love.<\/p>"
           }
         },
         "text_ynWQtX": {
           "type": "text",
           "settings": {
-            "content": "<p>We push each other, we elevate each other. Through every challenge, every victory, every setback—we show up. Not just for ourselves, but for the ones who need us. The mission is bigger than personal success; it’s about impact, about shaping something greater than ourselves.<\/p>"
+            "content": "<p>We push each other, we elevate each other. Through every challenge, every victory, every setback - we show up. Not just for ourselves, but for the ones who need us. The mission is bigger than personal success; it’s about impact, about shaping something greater than ourselves.<\/p>"
           }
         },
         "text_6NN7hK": {
@@ -55,7 +55,7 @@
         "text_VzJrnJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to CRCL OF WNNRS, where ambition meets community. We are more than a brand—we are a lifestyle that celebrates resilience, growth, and the pursuit of greatness.<\/p><p>At our core, we believe success is a journey best traveled together. Our circle is built on the principles of empowerment, collaboration, and authenticity. Every product, event, and connection we create is a testament to our mission: to inspire individuals to reach their fullest potential and uplift others along the way.<\/p><p>From humble beginnings to an ever-expanding global community, CRCL OF WNNRS is driven by a passion for excellence and the power of unity. We are here to redefine what it means to win, transforming individual victories into collective achievements.<\/p><h6>One Circle. One Mission. Infinite Victories.<\/h6>",
+            "text": "<p>Welcome to CRCL OF WNNRS, where ambition meets community. We are more than a brand - We are a mindset, a lifestyle, an ethos, and an ecosystem that celebrates resilience, growth, and the pursuit of greatness.<\/p><p>At our core, we believe success is a journey best traveled together. Our circle is built on the principles of empowerment, collaboration, and authenticity. Every product, event, and connection we create is a testament to our mission: to inspire individuals to reach their fullest potential and uplift others along the way.<\/p><p>From humble beginnings to an ever-expanding global community, CRCL OF WNNRS is driven by a passion for excellence and the power of unity. We are here to redefine what it means to win, transforming individual victories into collective achievements.<\/p><h6>One Circle. One Mission. Infinite Victories.<\/h6>",
             "text_style": "body"
           }
         }
@@ -94,7 +94,7 @@
             "block_colors": "scheme-5",
             "text_alignment": "center",
             "title": "MISSION",
-            "title_size": "ts-text-size_lg",
+            "title_size": "ts-text-size_sm",
             "content": "<p>Built to cultivate a creative ecosystem where ambition meets collaboration as we inspire, uplift, and connect those with common values<\/p>",
             "txt_size": "ts-text-size_sm"
           }
@@ -111,7 +111,7 @@
             "block_colors": "scheme-5",
             "text_alignment": "center",
             "title": "VISION",
-            "title_size": "ts-text-size_lg",
+            "title_size": "ts-text-size_sm",
             "content": "<p>EMPOWERING WINNERS WORLDWIDE BY DELIVERING A BRAND THAT ADDS SIGNIFICANT VALUE TO THEIR LIVES<\/p>",
             "txt_size": "ts-text-size_sm"
           }

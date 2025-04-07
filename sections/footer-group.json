@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -80,6 +89,7 @@
         "marq_item_V3zbTB",
         "marq_item_FPXDkn"
       ],
+      "disabled": true,
       "settings": {
         "section_colors": "scheme-2",
         "text_alignment": "center",
@@ -97,7 +107,7 @@
         "image_93EVma": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/store_logo.png",
+            "image": "shopify://shop_images/store_logo.png",
             "image_width": 295,
             "alignment": ""
           }
@@ -130,11 +140,12 @@
         "link_list_GCXRyK",
         "link_list_GTVwWY"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "newsletter_enable": true,
         "newsletter_heading": "Keep yourself updated!",
-        "newsletter_subtext": "<p>Subscribe to get our weekly newsletter.<\/p>",
+        "newsletter_subtext": "<p>Subscribe to get our weekly newsletter.</p>",
         "enable_follow_on_shop": false,
         "show_social": true,
         "social_heading": "Follow Us",

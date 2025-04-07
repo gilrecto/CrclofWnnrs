@@ -23,7 +23,6 @@
         },
         "buttons_w6tdcX": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "shop MEN"
@@ -31,7 +30,6 @@
         },
         "buttons_b3qxXe": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "shop WoMEN"
@@ -66,7 +64,6 @@
       "blocks": {
         "heading_njDeRX": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "type": "caption",
             "heading_text": "Explore Collections",
@@ -76,7 +73,6 @@
         },
         "heading_TccBzY": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "type": "title",
             "heading_text": "Summer 25",
@@ -86,7 +82,6 @@
         },
         "buttons_9eNYQW": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "DISCOVER"
@@ -98,7 +93,6 @@
         "heading_TccBzY",
         "buttons_9eNYQW"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "banner_type": "image",
@@ -123,7 +117,6 @@
       "blocks": {
         "heading_3cr6DY": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "type": "caption",
             "heading_text": "Explore Collections",
@@ -133,7 +126,6 @@
         },
         "heading_UhHAyg": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "type": "title",
             "heading_text": "Winners Circle",
@@ -143,7 +135,6 @@
         },
         "buttons_wVBWRR": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "DISCOVER"
@@ -155,7 +146,6 @@
         "heading_UhHAyg",
         "buttons_wVBWRR"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "banner_type": "image",
@@ -177,7 +167,6 @@
     },
     "cow_featured_collection_xeLpPm": {
       "type": "cow_featured_collection",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "title": "BEST SELLERS",

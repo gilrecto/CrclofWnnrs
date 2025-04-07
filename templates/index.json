@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cow_banner_CfjHj6": {
@@ -37,7 +46,7 @@
         "banner_type": "video",
         "add_overlay": false,
         "overlay_opacity": 0.5,
-        "video": "shopify:\/\/files\/videos\/-2665-4731-a24d-9a3f1fa2410a.mp4",
+        "video": "shopify://files/videos/-2665-4731-a24d-9a3f1fa2410a.mp4",
         "content_alignment_h": "md:ts-items-start",
         "content_alignment_v": "md:ts-justify-end",
         "text_alignment": "left",
@@ -85,13 +94,14 @@
         "heading_TccBzY",
         "buttons_9eNYQW"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "banner_type": "image",
         "add_overlay": true,
         "overlay_opacity": 0.3,
-        "banner_image": "shopify:\/\/shop_images\/summer_collection_banner.jpg",
-        "banner_img_mb": "shopify:\/\/shop_images\/summer_collection_banner_mob.jpg",
+        "banner_image": "shopify://shop_images/summer_collection_banner.jpg",
+        "banner_img_mb": "shopify://shop_images/summer_collection_banner_mob.jpg",
         "content_alignment_h": "md:ts-items-center",
         "content_alignment_v": "md:ts-justify-center",
         "text_alignment": "center",
@@ -139,13 +149,14 @@
         "heading_UhHAyg",
         "buttons_wVBWRR"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "banner_type": "image",
         "add_overlay": true,
         "overlay_opacity": 0.3,
-        "banner_image": "shopify:\/\/shop_images\/winnrs_collection_banner.jpg",
-        "banner_img_mb": "shopify:\/\/shop_images\/winnrs_collection_banner_mob.jpg",
+        "banner_image": "shopify://shop_images/winnrs_collection_banner.jpg",
+        "banner_img_mb": "shopify://shop_images/winnrs_collection_banner_mob.jpg",
         "content_alignment_h": "md:ts-items-center",
         "content_alignment_v": "md:ts-justify-center",
         "text_alignment": "center",
@@ -160,6 +171,7 @@
     },
     "cow_featured_collection_xeLpPm": {
       "type": "cow_featured_collection",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "title": "BEST SELLERS",

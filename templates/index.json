@@ -74,6 +74,7 @@
         },
         "heading_TccBzY": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "type": "title",
             "heading_text": "Summer 25",
@@ -83,6 +84,7 @@
         },
         "buttons_9eNYQW": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "DISCOVER"
@@ -129,6 +131,7 @@
         },
         "heading_UhHAyg": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "type": "title",
             "heading_text": "Winners Circle",
@@ -138,6 +141,7 @@
         },
         "buttons_wVBWRR": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "DISCOVER"

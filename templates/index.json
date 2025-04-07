@@ -23,6 +23,7 @@
         },
         "buttons_w6tdcX": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "shop MEN"
@@ -30,6 +31,7 @@
         },
         "buttons_b3qxXe": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_url": "",
             "button_text": "shop WoMEN"

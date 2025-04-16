@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cow_image_text_slider_bCjCH6": {
@@ -6,25 +15,25 @@
         "text_a9xTAw": {
           "type": "text",
           "settings": {
-            "content": "<p>A circle is more than just a shape - it's a symbol of unity, infinite, wholeness, and connection. It holds despite outside pressure, just like us. We come from different backgrounds, experiences, and paths, but we are bound by a common purpose - driven by the values that define<br\/>who we are.<\/p>"
+            "content": "<p>A circle is more than just a shape - it's a symbol of unity, infinite, wholeness, and connection. It holds despite outside pressure, just like us. We come from different backgrounds, experiences, and paths, but we are bound by a common purpose - driven by the values that define<br/>who we are.</p>"
           }
         },
         "text_9hcc4m": {
           "type": "text",
           "settings": {
-            "content": "<p>Crcl Of Wnnrs is more than a mindset; it’s a way of life. A code. It’s the relentless pursuit of growth, the commitment to those who stand beside us - We hold our people down, because they hold us down. It’s built on inspiration, trust, respect, and love.<\/p>"
+            "content": "<p>Crcl Of Wnnrs is more than a mindset; it’s a way of life. A code. It’s the relentless pursuit of growth, the commitment to those who stand beside us - We hold our people down, because they hold us down. It’s built on inspiration, trust, respect, and love.</p>"
           }
         },
         "text_ynWQtX": {
           "type": "text",
           "settings": {
-            "content": "<p>We push each other, we elevate each other. Through every challenge, every victory, every setback - we show up. Not just for ourselves, but for the ones who need us. The mission is bigger than personal success; it’s about impact, about shaping something greater than ourselves.<\/p>"
+            "content": "<p>We push each other, we elevate each other. Through every challenge, every victory, every setback - we show up. Not just for ourselves, but for the ones who need us. The mission is bigger than personal success; it’s about impact, about shaping something greater than ourselves.</p>"
           }
         },
         "text_6NN7hK": {
           "type": "text",
           "settings": {
-            "content": "<p>We don’t choose this path because it’s easy. We choose it because it matters. If not us, then who?<\/p>"
+            "content": "<p>We don’t choose this path because it’s easy. We choose it because it matters. If not us, then who?</p>"
           }
         }
       },
@@ -37,7 +46,7 @@
       "settings": {
         "section_colors": "scheme-4",
         "top_space": 3,
-        "image": "shopify:\/\/shop_images\/about_img.jpg",
+        "image": "shopify://shop_images/CoW_Trophy_Case.jpg",
         "image_position": "left"
       }
     },
@@ -55,7 +64,7 @@
         "text_VzJrnJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to CRCL OF WNNRS, where ambition meets community. We are more than a brand - We are a mindset, a lifestyle, an ethos, and an ecosystem that celebrates resilience, growth, and the pursuit of greatness.<\/p><p>At our core, we believe success is a journey best traveled together. Our circle is built on the principles of empowerment, collaboration, and authenticity. Every product, event, and connection we create is a testament to our mission: to inspire individuals to reach their fullest potential and uplift others along the way.<\/p><p>From humble beginnings to an ever-expanding global community, CRCL OF WNNRS is driven by a passion for excellence and the power of unity. We are here to redefine what it means to win, transforming individual victories into collective achievements.<\/p><h6>One Circle. One Mission. Infinite Victories.<\/h6>",
+            "text": "<p>Welcome to CRCL OF WNNRS, where ambition meets community. We are more than a brand - We are a mindset, a lifestyle, an ethos, and an ecosystem that celebrates resilience, growth, and the pursuit of greatness.</p><p>At our core, we believe success is a journey best traveled together. Our circle is built on the principles of empowerment, collaboration, and authenticity. Every product, event, and connection we create is a testament to our mission: to inspire individuals to reach their fullest potential and uplift others along the way.</p><p>From humble beginnings to an ever-expanding global community, CRCL OF WNNRS is driven by a passion for excellence and the power of unity. We are here to redefine what it means to win, transforming individual victories into collective achievements.</p><h6>One Circle. One Mission. Infinite Victories.</h6>",
             "text_style": "body"
           }
         }
@@ -69,7 +78,7 @@
         ".image-with-text__text h6 {font-family: \"Vincent\", \"sans-serif\"; color: rgba(var(--color-foreground)); font-size: 1.8rem; line-height: 1.5;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/post_4.jpg",
+        "image": "shopify://shop_images/post_4.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -95,14 +104,14 @@
             "text_alignment": "center",
             "title": "MISSION",
             "title_size": "ts-text-size_sm",
-            "content": "<p>Built to cultivate a creative ecosystem where ambition meets collaboration as we inspire, uplift, and connect those with common values<\/p>",
+            "content": "<p>Built to cultivate a creative ecosystem where ambition meets collaboration as we inspire, uplift, and connect those with common values</p>",
             "txt_size": "ts-text-size_sm"
           }
         },
         "image_picker_hbDznG": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grid_img1.jpg"
+            "image": "shopify://shop_images/grid_img1.jpg"
           }
         },
         "text_rdYnRG": {
@@ -112,14 +121,14 @@
             "text_alignment": "center",
             "title": "VISION",
             "title_size": "ts-text-size_sm",
-            "content": "<p>EMPOWERING WINNERS WORLDWIDE BY DELIVERING A BRAND THAT ADDS SIGNIFICANT VALUE TO THEIR LIVES<\/p>",
+            "content": "<p>EMPOWERING WINNERS WORLDWIDE BY DELIVERING A BRAND THAT ADDS SIGNIFICANT VALUE TO THEIR LIVES</p>",
             "txt_size": "ts-text-size_sm"
           }
         },
         "image_picker_zjYdAy": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grid_img2.jpg"
+            "image": "shopify://shop_images/grid_img2.jpg"
           }
         }
       },

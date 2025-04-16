@@ -170,7 +170,7 @@
       "type": "cow_featured_collection",
       "settings": {
         "color_scheme": "",
-        "title": "BEST SELLERS",
+        "title": "RELEASED",
         "title_size": "ts-text-size_md",
         "collection": "shop",
         "view_all": true,

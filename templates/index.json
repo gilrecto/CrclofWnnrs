@@ -99,7 +99,7 @@
         "add_overlay": true,
         "overlay_opacity": 0.3,
         "banner_image": "shopify://shop_images/CoW_Trophy_Case.jpg",
-        "banner_img_mb": "shopify://shop_images/summer_collection_banner_mob.jpg",
+        "banner_img_mb": "shopify://shop_images/CoW_Trophy_Case.jpg",
         "content_alignment_h": "md:ts-items-center",
         "content_alignment_v": "md:ts-justify-center",
         "text_alignment": "center",

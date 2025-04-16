@@ -66,7 +66,7 @@
           "type": "heading",
           "settings": {
             "type": "caption",
-            "heading_text": "crcl of wnnrs",
+            "heading_text": "",
             "heading_size": "ts-text-size_sm",
             "text_transform": "ts-uppercase"
           }
@@ -76,7 +76,7 @@
           "settings": {
             "type": "title",
             "heading_text": "SPRING 2025",
-            "heading_size": "ts-text-clamp_l",
+            "heading_size": "ts-text-clamp_xl",
             "text_transform": "ts-normal-case"
           }
         },
@@ -98,7 +98,7 @@
         "banner_type": "image",
         "add_overlay": true,
         "overlay_opacity": 0.3,
-        "banner_image": "shopify://shop_images/summer_collection_banner.jpg",
+        "banner_image": "shopify://shop_images/CoW_Trophy_Case.jpg",
         "banner_img_mb": "shopify://shop_images/summer_collection_banner_mob.jpg",
         "content_alignment_h": "md:ts-items-center",
         "content_alignment_v": "md:ts-justify-center",

@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "cow_main_event",
       "settings": {
         "section_colors": "",
-        "title": "Lookbooks",
+        "title": "Lookbooks COMING SOON.",
         "title_size": "ts-text-size_md",
         "text_alignment": "left",
         "card_colors": "scheme-4",

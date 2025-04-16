@@ -98,8 +98,8 @@
         "banner_type": "image",
         "add_overlay": true,
         "overlay_opacity": 0.3,
-        "banner_image": "shopify://shop_images/CoW_Trophy_Case.jpg",
-        "banner_img_mb": "shopify://shop_images/CoW_Trophy_Case.jpg",
+        "banner_image": "shopify://shop_images/Trophy_Room.jpg",
+        "banner_img_mb": "shopify://shop_images/Trophy_Room.jpg",
         "content_alignment_h": "md:ts-items-center",
         "content_alignment_v": "md:ts-justify-center",
         "text_alignment": "center",
@@ -146,6 +146,7 @@
         "heading_UhHAyg",
         "buttons_wVBWRR"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "banner_type": "image",

@@ -78,7 +78,7 @@
         ".image-with-text__text h6 {font-family: \"Vincent\", \"sans-serif\"; color: rgba(var(--color-foreground)); font-size: 1.8rem; line-height: 1.5;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/post_4.jpg",
+        "image": "shopify://shop_images/Who_We_Are.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",

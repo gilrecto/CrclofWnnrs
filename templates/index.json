@@ -25,21 +25,13 @@
           "type": "buttons",
           "settings": {
             "button_url": "",
-            "button_text": "shop MEN"
-          }
-        },
-        "buttons_b3qxXe": {
-          "type": "buttons",
-          "settings": {
-            "button_url": "",
-            "button_text": "shop WoMEN"
+            "button_text": "SHOP"
           }
         }
       },
       "block_order": [
         "heading_EAU3mB",
-        "buttons_w6tdcX",
-        "buttons_b3qxXe"
+        "buttons_w6tdcX"
       ],
       "settings": {
         "color_scheme": "scheme-4",

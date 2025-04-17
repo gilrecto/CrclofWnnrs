@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -120,7 +129,7 @@
       "settings": {
         "section_colors": "scheme-1",
         "title": "Contact Us",
-        "contact_body": "<p><strong>Press<br\/><\/strong>For all press inquiries, please contact: <a href=\"mailto:press@crclofwnnrs.com\" title=\"Email press@crclofwnnrs.com\">press@crclofwnnrs.com<\/a><\/p><p><strong>Wholesale<\/strong><br\/>For all wholesale inquiries, please contact: <a href=\"mailto:wholesale@crclofwnnrs.com\" title=\"Email wholesale@crclofwnnrs.com\">wholesale@crclofwnnrs.com<\/a><\/p><p><strong>For customer inquiries<br\/><\/strong>Please fill out the inquiry box.\u2028Our customer service is available during the following hours [10 am-6 pm, Monday-Friday]. Please expect a response within [24hr-48hr]. For all tracking inquiries, please combine your questions into one message.<\/p><p><strong>Product care<br\/><\/strong>For fabric care instructions, please refer to the specific fabric page on our website. We provide care instructions based on each fabric to ensure the longevity and quality of our products. Please note that these care instructions are for insurance purposes and to inform our customers.<\/p>",
+        "contact_body": "<p><strong>Press<br/></strong>For all press inquiries, please contact: <a href=\"mailto:press@crclofwnnrs.com\" title=\"Email press@crclofwnnrs.com\">press@crclofwnnrs.com</a></p><p><strong>Wholesale</strong><br/>For all wholesale inquiries, please contact: <a href=\"mailto:wholesale@crclofwnnrs.com\" title=\"Email wholesale@crclofwnnrs.com\">wholesale@crclofwnnrs.com</a></p><p><strong>For customer inquiries<br/></strong>Please fill out the inquiry box. Our customer service is available during the following hours [10 am-6 pm, Monday-Friday]. Please expect a response within [24hr-48hr]. For all tracking inquiries, please combine your questions into one message.</p><p><strong>Product care<br/></strong>For fabric care instructions, please refer to the specific fabric page on our website. We provide care instructions based on each fabric to ensure the longevity and quality of our products. Please note that these care instructions are for insurance purposes and to inform our customers.</p>",
         "form_title": "Submit an Inquiry",
         "faq_enable": true,
         "faq_title": "Frequently Asked Questions",

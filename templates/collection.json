@@ -119,13 +119,6 @@
             "image": "shopify://shop_images/CoW_Green_Hoodie_2.jpg",
             "insta_link": "https://www.instagram.com/p/CfoySi-lWbZ/"
           }
-        },
-        "post_zwwFzy": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/post_8.jpg",
-            "insta_link": "https://www.instagram.com/p/Cf_69Zvr-zy/?img_index=1"
-          }
         }
       },
       "block_order": [
@@ -135,8 +128,7 @@
         "post_9Tt9VV",
         "post_rnHfV4",
         "post_qWQwbm",
-        "post_BbY9TT",
-        "post_zwwFzy"
+        "post_BbY9TT"
       ],
       "settings": {
         "section_colors": "",

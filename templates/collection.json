@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -65,57 +74,57 @@
         "post_m9EyJH": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_1.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/B-qvoF-hDch\/"
+            "image": "shopify://shop_images/post_1.jpg",
+            "insta_link": "https://www.instagram.com/p/B-qvoF-hDch/"
           }
         },
         "post_GpkTVz": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_2.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/CQhg0k9BOiO\/"
+            "image": "shopify://shop_images/post_2.jpg",
+            "insta_link": "https://www.instagram.com/p/CQhg0k9BOiO/"
           }
         },
         "post_iCXQMg": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_3.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/CJG6THeninQ\/"
+            "image": "shopify://shop_images/post_3.jpg",
+            "insta_link": "https://www.instagram.com/p/CJG6THeninQ/"
           }
         },
         "post_9Tt9VV": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_4.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/CQuS0Tghcr-\/?img_index=1"
+            "image": "shopify://shop_images/post_4.jpg",
+            "insta_link": "https://www.instagram.com/p/CQuS0Tghcr-/?img_index=1"
           }
         },
         "post_rnHfV4": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_5.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/B5VNsrIhnzT\/?img_index=1"
+            "image": "shopify://shop_images/post_5.jpg",
+            "insta_link": "https://www.instagram.com/p/B5VNsrIhnzT/?img_index=1"
           }
         },
         "post_qWQwbm": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_6.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/CVRRxuZvGI7\/"
+            "image": "shopify://shop_images/post_6.jpg",
+            "insta_link": "https://www.instagram.com/p/CVRRxuZvGI7/"
           }
         },
         "post_BbY9TT": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_7.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/CfoySi-lWbZ\/"
+            "image": "shopify://shop_images/post_7.jpg",
+            "insta_link": "https://www.instagram.com/p/CfoySi-lWbZ/"
           }
         },
         "post_zwwFzy": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/post_8.jpg",
-            "insta_link": "https:\/\/www.instagram.com\/p\/Cf_69Zvr-zy\/?img_index=1"
+            "image": "shopify://shop_images/post_8.jpg",
+            "insta_link": "https://www.instagram.com/p/Cf_69Zvr-zy/?img_index=1"
           }
         }
       },
@@ -133,7 +142,7 @@
         "section_colors": "",
         "title": "",
         "title_size": "ts-text-clamp_l",
-        "body": "<p>@CRCLOFWNNRS<\/p>",
+        "body": "<p>@<strong>CRCLOFWNNRS</strong></p>",
         "show_social": false,
         "text_alignment": "right",
         "d_slides": 6,
